@@ -1,0 +1,32 @@
+{
+    "text": [
+        {
+            "id": "1",
+            "text": "Hello, I'm Louis. I'm a bot that can help you find the best places to eat in your area. What's your name?",
+            "dependsOn": [
+                ""
+            ]
+        },
+        {
+            "id": "2",
+            "text": "étape 2",
+            "dependsOn": [
+                "Nadia:2"
+            ]
+        },
+        {
+            "id": "3",
+            "text": "étape 3",
+            "dependsOn": [
+
+            ]
+        },
+        {
+            "id": "4",
+            "text": "étape 4",
+            "dependsOn": [
+
+            ]
+        }
+    ]
+}
