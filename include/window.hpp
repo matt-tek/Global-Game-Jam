@@ -12,18 +12,9 @@
 
 class windowClass {
     public:
-    void createWindow(int width, int height, std::string window_name)
-    {
-        mode.width = width;
-        mode.height = height;
-        window.create(mode, window_name);
-        return;
-    }
+    void createWindow(int width, int height, std::string window_name);
 
-    sf::RenderWindow *getWindow(void)
-    {
-        return &this->window;
-    }
+    sf::RenderWindow *getWindow(void);
 
     private:
     sf::VideoMode mode;

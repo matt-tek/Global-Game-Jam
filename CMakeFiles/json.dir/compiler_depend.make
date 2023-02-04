@@ -1022,6 +1022,7 @@ CMakeFiles/json.dir/src/player.cpp.o: src/player.cpp \
   /usr/include/c++/12/bits/stl_stack.h \
   /usr/include/json/writer.h \
   include/game.hpp \
+  include/include.hpp \
   /usr/include/SFML/Window.hpp \
   /usr/include/SFML/System.hpp \
   /usr/include/SFML/Config.hpp \
@@ -1113,7 +1114,8 @@ CMakeFiles/json.dir/src/player.cpp.o: src/player.cpp \
   /usr/include/SFML/Graphics/Glsl.inl \
   /usr/include/SFML/Graphics/Sprite.hpp \
   /usr/include/SFML/Graphics/Text.hpp \
-  /usr/include/SFML/Graphics/VertexBuffer.hpp
+  /usr/include/SFML/Graphics/VertexBuffer.hpp \
+  include/window.hpp
 
 
 src/main.cpp:

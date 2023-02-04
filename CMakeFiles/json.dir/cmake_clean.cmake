@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/json.dir/src/main.cpp.o.d"
   "CMakeFiles/json.dir/src/player.cpp.o"
   "CMakeFiles/json.dir/src/player.cpp.o.d"
+  "CMakeFiles/json.dir/src/window.cpp.o"
+  "CMakeFiles/json.dir/src/window.cpp.o.d"
   "json"
   "json.pdb"
 )

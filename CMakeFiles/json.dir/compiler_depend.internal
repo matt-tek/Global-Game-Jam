@@ -1025,6 +1025,7 @@ CMakeFiles/json.dir/src/player.cpp.o
  /usr/include/c++/12/bits/stl_stack.h
  /usr/include/json/writer.h
  /home/lennygarnier/Delivery/Global-Game-Jam-/include/game.hpp
+ /home/lennygarnier/Delivery/Global-Game-Jam-/include/include.hpp
  /usr/include/SFML/Window.hpp
  /usr/include/SFML/System.hpp
  /usr/include/SFML/Config.hpp
@@ -1117,4 +1118,5 @@ CMakeFiles/json.dir/src/player.cpp.o
  /usr/include/SFML/Graphics/Sprite.hpp
  /usr/include/SFML/Graphics/Text.hpp
  /usr/include/SFML/Graphics/VertexBuffer.hpp
+ /home/lennygarnier/Delivery/Global-Game-Jam-/include/window.hpp
 

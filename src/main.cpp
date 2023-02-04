@@ -19,13 +19,10 @@ int main(void)
     gm->getPlayer("Louis").talk();
     gm->getPlayer("Louis").talk();
     gm->getPlayer("Louis").talk();
-    
+
     gm->getWindow()->createWindow(800, 600, "name");
     while (gm->getWindow()->getWindow()->isOpen()) {
 
     }
     return (0);
 }
-
-
-
