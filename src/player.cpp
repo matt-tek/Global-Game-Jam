@@ -72,11 +72,9 @@ bool player::loadjson(std::string file) {
         words.clear();
         for (auto &it3 : it["clickable_words"]) {
             std::string str = it3.asString();
-            std::cout << "[" << str << "], ";
             words.push_back(str);
         }
         this->clickableWords.push_back(words);            
-        cout << endl;
     }
     return true;
 }
@@ -103,8 +101,8 @@ int isSingleChar(std::string str)
 
 void player::talk(game **gm) {
     sf::Text text;
-    float offset = 0;
-    float y = 0;
+    float offset = 400;
+    float y = 750;
     vector<string> vec;
 
     std::cout << this->parole[this->value]->parole << std::endl;
@@ -114,8 +112,8 @@ void player::talk(game **gm) {
     (*gm)->dialog.clear();
     text.setFont((*gm)->font);
     for (size_t i = 0; i < vec.size(); i++) {
-        if (offset >= 1000) {
-            offset = 0;
+        if (offset >= 1600) {
+            offset = 400;
             y += 80;
         }
         text.setCharacterSize(50);
