@@ -8,11 +8,16 @@
 
 using namespace std;
 
+typedef enum screens_s {
+    main_menu,
+    dialog_screen,
+    diary_screen
+} screens;
+
 class button {
     private:
     public:
     virtual void effect(void) = 0;
-
 };
 
 class diaryButton : public button {
@@ -47,15 +52,12 @@ class diaryButton : public button {
     int isMouseOnButton(sf::Vector2f mousePos)
     {
         if (hitBox.contains(mousePos) == true &&
-            sf::Mouse::isButtonPressed(sf::Mouse::Left) == true &&
-            isMouseClicked == true) {
-                return 0;
+            sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
+            isMouseClicked == false) {
             this->effect();
             isMouseClicked = true;
             return 1;
         }
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == false)
-            isMouseClicked = false;
         return 0;
     }
 
@@ -133,6 +135,7 @@ class game
     private:
         windowClass win;
     public:
+        screens currentScreen = dialog_screen;
         vector<string> collectedWords;
         static game *instance;
         diaryButton diaryBut;
