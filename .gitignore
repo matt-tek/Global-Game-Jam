@@ -1,7 +1,9 @@
 # Prerequisites
 *.d
-
+out
 build
+.vs
+.vscode
 # Compiled Object files
 *.slo
 *.lo
