@@ -2,11 +2,11 @@
     "caracters": [
         {
             "name": "Nadia",
-            "file": "./ressources/nadia.json"
+            "file": "./nadia.json"
         },
         {
             "name": "Louis",
-            "file": "./ressources/louis.json"
+            "file": "./louis.json"
         }
     ]
 }
