@@ -24,5 +24,14 @@
             ],
             "clickable_words": ["James"]
         }
+        ,
+        {
+            "id": 4,
+            "text": "Oui",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        }
     ]
 }

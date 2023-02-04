@@ -7,39 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
-include(FetchContent)
-
-set(SFML_VERSION 2.5.1)
-
-FetchContent_Declare(
-    sfml
-    GIT_REPOSITORY "https://github.com/SFML/SFML.git"
-    GIT_TAG        "${SFML_VERSION}"
-)
-
-FetchContent_GetProperties(sfml)
-
-if(NOT sfml_POPULATED)
-    FetchContent_Populate(sfml)
-    add_subdirectory(${sfml_SOURCE_DIR} ${sfml_BINARY_DIR})
-endif()
-
-
-
-FetchContent_Declare(
-	jsoncpp
-	GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
-	GIT_TAG master
-)
-
-FetchContent_GetProperties(jsoncpp)
-if (NOT jsoncpp_POPULATED)
-	FetchContent_Populate(jsoncpp)
-	add_subdirectory(${jsoncpp_SOURCE_DIR} ${jsoncpp_BINARY_DIR})
-endif()
-
-
-FetchContent_MakeAvailable(jsoncpp)
+find_package(jsoncpp REQUIRED)
 
 file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 
@@ -47,9 +15,9 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME} jsoncpp_lib)
 
+find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
 
-target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
+target_link_libraries(json sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
 
 FILE(COPY ${PROJECT_SOURCE_DIR}/ressources DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
-
 

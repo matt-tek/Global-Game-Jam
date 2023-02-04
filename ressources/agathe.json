@@ -2,15 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Hi I'm Agathe this is a test",
-            "dependsOn": [
-                
-            ],
-            "clickable_words": ["Agathe"]
-        },
-        {
-            "id": 2,
-            "text": "hey James",
+            "text": "Oui",
             "dependsOn": [
                 
             ],

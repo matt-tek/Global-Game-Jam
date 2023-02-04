@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Hi I'm Julia this is a test",
+            "text": "Bien dormi les enfants ?",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,15 @@
         },
         {
             "id": 2,
-            "text": "hey James",
+            "text": "...",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 3,
+            "text": "Est-ce une heure pour rentrer jeune fille ?",
             "dependsOn": [
                 
             ],

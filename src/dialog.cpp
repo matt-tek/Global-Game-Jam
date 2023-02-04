@@ -10,7 +10,8 @@
 vector<string> introduction = {{"Catherine", "James", "Catherine", "James",
     "Catherine", "James"}};
 
-vector<string> breakfast = {{"Elize", "Elize", "Carlos"}};
+vector<string> breakfast = {{"Julia", "Catherine", "James", "Agathe", "Julia",
+    "Julia", "Elize"}};
 
 vector<vector<string>> history = {introduction, breakfast};
 

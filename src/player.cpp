@@ -48,12 +48,8 @@ bool player::loadjson(std::string file) {
     Json::Value root;
     std::vector<std::string> words;
 
-    if (!reader.parse(ifs, root)) {
-        cout << "Fail: " << file << endl;
+    if (!reader.parse(ifs, root))
         return false;
-    } else {
-        cout << "Success: " << file << endl;
-    }
     this->clickableWords.push_back(words);
     std::cout << "Loading player " << this->name << std::endl;
     Json::Value tex = root["text"];
@@ -126,7 +122,7 @@ void player::talk(game **gm) {
     std::cout << this->parole[this->value]->parole << std::endl;
     this->parole[this->value]->validate = true;
     vec = split(this->parole[this->value]->parole.c_str(), " ");
-    (*gm)->font.loadFromFile("./assets/fonts/arial.ttf");
+    (*gm)->font.loadFromFile("./assets/fonts/Dating.ttf");
     (*gm)->dialog.clear();
     text.setFont((*gm)->font);
     for (size_t i = 0; i < vec.size(); i++) {
