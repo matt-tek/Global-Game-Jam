@@ -7,16 +7,58 @@
             "profile_picture": "./ressources/catherine.json"
         },
         {
+            "name": "Agathe",
+            "file": "./ressources/agathe.json",
+            "sprite": "./assets/sprites/Agathe_1.png",
+            "profile_picture": "./assets/sprites/AgatheHead.png"
+        }, 
+        {
+            "name": "Carlos",
+            "file": "./ressources/Carlos.json",
+            "sprite": "./assets/sprites/Carlos_1.png",
+            "profile_picture": "./assets/sprites/CarlosHead.png"
+        },
+        {
             "name": "Catherine",
             "file": "./ressources/catherine.json",
             "sprite": "./assets/sprites/Catherine_1.png",
             "profile_picture": "./assets/sprites/CatherineHead.png"
         },
         {
-            "name": "Agathe",
-            "file": "./ressources/agathe.json",
-            "sprite": "./assets/sprites/Agathe_1.png",
-            "profile_picture": "./assets/sprites/AgatheHead.png"
+            "name": "Elize",
+            "file": "./ressources/Elize.json",
+            "sprite": "./assets/sprites/Elize_1.png",
+            "profile_picture": "./assets/sprites/ElizeHead.png"
+        },
+        {
+            "name": "Julia",
+            "file": "./ressources/Julia.json",
+            "sprite": "./assets/sprites/Julia_1.png",
+            "profile_picture": "./assets/sprites/JuliaHead.png"
+        },
+        {
+            "name": "Maria",
+            "file": "./ressources/Maria.json",
+            "sprite": "./assets/sprites/Maria_1.png",
+            "profile_picture": "./assets/sprites/MariaHead.png"
+        },
+        {
+            "name": "Pablo",
+            "file": "./ressources/Pablo.json",
+            "sprite": "./assets/sprites/Pablo_1.png",
+            "profile_picture": "./assets/sprites/PabloHead.png"
+        },
+        {
+            "name": "Sebastian",
+            "file": "./ressources/Sebastian.json",
+            "sprite": "./assets/sprites/Sebastian_1.png",
+            "profile_picture": "./assets/sprites/SebastianHead.png"
+        },
+        {
+            "name": "Victor",
+            "file": "./ressources/Victor.json",
+            "sprite": "./assets/sprites/Victor_1.png",
+            "profile_picture": "./assets/sprites/VictorHead.png"
         }
     ]
 }
