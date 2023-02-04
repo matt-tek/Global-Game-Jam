@@ -1,23 +1,27 @@
 
 
+#include "include.hpp"
+#include "window.hpp"
+
 #pragma once
 
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <memory>
-#include "player.hpp"
-#include <json/json.h>
+using namespace std;
 
 class game
 {
     private:
-        game();
+        windowClass win;
     public:
         static game *instance;
         std::vector<std::shared_ptr<player>> players;
         
+        game();
         ~game();
+
+        windowClass *getWindow(void)
+        {
+            return &win;
+        }
 
         static game *getInstance();
 

@@ -5,7 +5,8 @@
             "text": "Hello, I'm Louis. I'm a bot that can help you find the best places to eat in your area. What's your name?",
             "dependsOn": [
                 
-            ]
+            ],
+            "clickable_word": ["Louis"]
         },
         {
             "id": 2,

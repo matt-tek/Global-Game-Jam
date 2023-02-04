@@ -15,6 +15,10 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME} jsoncpp_lib)
 
+find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
+
+target_link_libraries(json sfml-system sfml-window sfml-graphics sfml-network sfml-audio)
+
 FILE(COPY ${PROJECT_SOURCE_DIR}/ressources DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 
