@@ -27,17 +27,17 @@ int main(void)
         gm->diaryBut.drawButton(gm->getWindow()->getWindow());
         gm->treeBut.drawButton(gm->getWindow()->getWindow());
         mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
-        gm->diaryBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
-        gm->treeBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
-        
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            gm->diaryBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
+            gm->treeBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
+        }
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == false)
             clicked = false;
         for (size_t i = 0; i < gm->dialog.size(); i++) {
             gm->getWindow()->getWindow()->draw(gm->dialog[i]);
             if (gm->texts[i].isClickable == true) {
                 //gm->getWindow()->getWindow()->draw(gm->texts[i].rect);
-                if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == true &&
-                    gm->texts[i].hitbox.contains(sf::Vector2f(mouse.x, mouse.y)) == true &&
+                if (gm->texts[i].hitbox.contains(sf::Vector2f(mouse.x, mouse.y)) == true &&
                     gm->texts[i].collected == false) {
                     gm->collectedWords.push_back(gm->texts[i].str);
                     for (size_t y = 0; y < gm->collectedWords.size(); y++)

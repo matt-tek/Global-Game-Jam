@@ -9,7 +9,8 @@
 
 string dialog(game **gm, int person)
 {
-    vector<string> dialog = {"Catherine", "Catherine", "Agathe", "Narrator"};
+    vector<string> dialog = {"Catherine", "James", "Catherine", "James",
+        "Catherine", "James"};
 
     if (person > dialog.size() - 1)
         return "Err";

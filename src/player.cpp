@@ -49,7 +49,10 @@ bool player::loadjson(std::string file) {
     std::vector<std::string> words;
 
     if (!reader.parse(ifs, root)) {
+        cout << "Fail: " << file << endl;
         return false;
+    } else {
+        cout << "Success: " << file << endl;
     }
     this->clickableWords.push_back(words);
     std::cout << "Loading player " << this->name << std::endl;

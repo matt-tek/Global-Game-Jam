@@ -2,15 +2,15 @@
     "text": [
         {
             "id": 1,
-            "text": "Il est tard",
+            "text": "Ya quoi",
             "dependsOn": [
                 
             ],
-            "clickable_words": ["tard", "is"]
+            "clickable_words": ["James"]
         },
         {
             "id": 2,
-            "text": "Toi ya quoi",
+            "text": "Duchesse",
             "dependsOn": [
                 
             ],
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "text": "Moi duchesse ?",
+            "text": "t'as bien entendu",
             "dependsOn": [
                 
             ],
