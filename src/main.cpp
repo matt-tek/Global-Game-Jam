@@ -12,19 +12,18 @@ int main(void)
     dialog(&gm, person);
     gm->Anim->setAnimClock(0.1f);
 
-    gm->dialogPannel = initRectangleShape((sf::Vector2f){4, 707},
+    gm->dialogPannel = initRectangleShape((sf::Vector2f){4, 1007},
         sf::Color::Black, 4, sf::Color::White, (sf::Vector2f){1910, 300});
 
     while (gm->getWindow()->getWindow()->isOpen()) {
         gm->getWindow()->getWindow()->clear();
-        // gm->Anim->getTime() = gm->_clock.getElapsedTime();
-        std::cout << "time : " << gm->Anim->getTime().asSeconds() << std::endl;
-        if (gm->Anim->getTime().asSeconds() == gm->Anim->getAnimClock()) {
-            gm->getWindow()->getWindow()->draw(gm->dialogPannel);
-            for (size_t i = 0; i < gm->dialog.size(); i++)
-                gm->getWindow()->getWindow()->draw(gm->dialog[i]);
-            gm->Anim->_clock.restart();
-        }
+        gm->getWindow()->getWindow()->draw(gm->dialogPannel);
+        // std::cout << "x = " << gm->dialogPannel.getSize().x << " --- y = " << gm->dialogPannel.getSize().y << std::endl;
+        gm->Anim->automoveUp(sf::Vector2f{4, 707}, 5.0f, gm->dialogPannel);
+        std::cout << " POS x = " << gm->dialogPannel.getPosition().x << " --- y = " << gm->dialogPannel.getPosition().y << std::endl;
+
+        for (size_t i = 0; i < gm->dialog.size(); i++)
+            gm->getWindow()->getWindow()->draw(gm->dialog[i]);
         gm->getWindow()->getWindow()->display();
         while (gm->getWindow()->getWindow()->pollEvent(event)) {
             if (event.type == sf::Event::Closed)

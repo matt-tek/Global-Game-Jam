@@ -11,6 +11,7 @@ class Animation {
         float getAnimClock(void) const { return _animClock; };
         void updateAnimClock(void);
         sf::Time getTime(void) const { return _time; };
+        void automoveUp(sf::Vector2f targetPos, float velocity, sf::RectangleShape &);
         sf::Clock _clock;
     protected:
     private:
