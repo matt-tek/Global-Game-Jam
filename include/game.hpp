@@ -142,6 +142,8 @@ class game
         vector<sf::Text> dialog;
         vector<clickWord> texts;
         sf::RectangleShape dialogPannel;
+        int currentScene = 0;
+        int person = 0;
 
         sf::Font font;
         
@@ -168,7 +170,7 @@ class game
         bool loadPlayers(std::string pl);
 };
 
-string dialog(game **gm, int person);
+string dialog(game **gm);
 sf::RectangleShape initRectangleShape(sf::Vector2f position,
     sf::Color fillColor, float outlineThickness, sf::Color outlineColor,
     sf::Vector2f size);

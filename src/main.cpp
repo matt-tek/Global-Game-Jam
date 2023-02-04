@@ -4,7 +4,6 @@ int main(void)
 {
     game *gm = game::getInstance();
     sf::Event event;
-    int person = 0;
     int isPressed = 0;
     sf::Vector2i mouse;
     bool clicked = false;
@@ -12,7 +11,7 @@ int main(void)
     gm->loadPlayers("./ressources/characters.json");
     gm->getWindow()->createWindow(1920, 1080, "name");
     string character;
-    character = dialog(&gm, person);
+    character = dialog(&gm);
 
     setupDiaryButton(&gm);
     setupTreeButton(&gm);
@@ -34,7 +33,8 @@ int main(void)
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == false)
             clicked = false;
         for (size_t i = 0; i < gm->dialog.size(); i++) {
-            gm->getWindow()->getWindow()->draw(gm->dialog[i]);
+            if (character.compare("Transition") != 0)
+                gm->getWindow()->getWindow()->draw(gm->dialog[i]);
             if (gm->texts[i].isClickable == true) {
                 //gm->getWindow()->getWindow()->draw(gm->texts[i].rect);
                 if (gm->texts[i].hitbox.contains(sf::Vector2f(mouse.x, mouse.y)) == true &&
@@ -57,8 +57,8 @@ int main(void)
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) == true && isPressed == 0) {
             gm->texts.clear();
             isPressed = 1;
-            person += 1;
-            character = dialog(&gm, person);
+            gm->person += 1;
+            character = dialog(&gm);
         }
         else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) == false)
             isPressed = 0;

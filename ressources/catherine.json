@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Il est tard",
+            "text": "T'es rentré toi ? je pensais que t'allais dormir à la soirée vu l'heure qu'il est .",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "text": "Toi ya quoi",
+            "text": "C'est pas parce que t'as 4 ans de plus que moi que tu dois faire le malin, puis t'as qu'a le dire à ta soeur",
             "dependsOn": [
                 
             ],
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "text": "Moi duchesse ?",
+            "text": "Bref, Agathe est dans sa chambre si tu veux la voir, elle est certainement en train de parler avec un nouveau gars.",
             "dependsOn": [
                 
             ],

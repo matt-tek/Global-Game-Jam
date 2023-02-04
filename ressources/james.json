@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Ya quoi",
+            "text": "Non non, honnêtement je me sentais pas à l'aise là bas donc j'ai préféré partir. Toi par contre tu devrais être au lit.",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "text": "Duchesse",
+            "text": "Mais ... c'est ce que je fais là. Tu viens à peine d'être majeur joue pas la grande.",
             "dependsOn": [
                 
             ],
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "text": "t'as bien entendu",
+            "text": "Je vais plutôt aller me coucher ça ira, je suis pas sur qu'elle veuille voir ma tête",
             "dependsOn": [
                 
             ],

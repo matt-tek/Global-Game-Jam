@@ -130,7 +130,7 @@ void player::talk(game **gm) {
     (*gm)->dialog.clear();
     text.setFont((*gm)->font);
     for (size_t i = 0; i < vec.size(); i++) {
-        if (offset >= 1800) {
+        if (offset >= 1700) {
             offset = 350;
             y += 80;
         }
