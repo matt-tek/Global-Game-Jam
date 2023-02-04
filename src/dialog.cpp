@@ -11,7 +11,7 @@ void dialog(game **gm, int person)
 {
     vector<string> dialog = {"Nadia", "Nadia", "Louis"};
 
-    if (person > dialog.size())
+    if (person > dialog.size() - 1)
         return;
     (*gm)->getPlayer(dialog[person]).talk(gm);
     return;

@@ -8,7 +8,7 @@ int main(void)
     int isPressed = 0;
 
     gm->loadPlayers("./ressources/characters.json");
-    gm->getWindow()->createWindow(800, 600, "name");
+    gm->getWindow()->createWindow(1920, 1080, "name");
     dialog(&gm, person);
     while (gm->getWindow()->getWindow()->isOpen()) {
         gm->getWindow()->getWindow()->clear();
