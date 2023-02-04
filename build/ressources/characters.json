@@ -1,0 +1,12 @@
+{
+    "caracters": [
+        {
+            "name": "Nadia",
+            "file": "./ressources/nadia.json"
+        },
+        {
+            "name": "Louis",
+            "file": "./ressources/louis.json"
+        }
+    ]
+}

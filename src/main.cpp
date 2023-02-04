@@ -13,7 +13,7 @@ int main(void)
 {
     game *gm = game::getInstance();
 
-    gm->loadPlayers("characters.json");
+    gm->loadPlayers("./ressources/characters.json");
 
 
     gm->getPlayer("Nadia").talk();
