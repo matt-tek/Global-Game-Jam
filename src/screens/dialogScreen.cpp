@@ -7,12 +7,9 @@
 
 #include "game.hpp"
 
-int dialogScreen(game *gm, string character)
+int dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
 {
     sf::Vector2i mouse;
-    bool clicked = false;
-    sf::Event event;
-    int isPressed = 0;
 
     gm->displayCharacter(character);
     gm->getWindow()->getWindow()->draw(gm->dialogPannel);
@@ -20,11 +17,11 @@ int dialogScreen(game *gm, string character)
     gm->treeBut.drawButton(gm->getWindow()->getWindow());
     mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
     if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        gm->diaryBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
+        gm->diaryBut.isMouseOnButton(gm, (sf::Vector2f){(float)mouse.x, (float)mouse.y});
         gm->treeBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
     }
     if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == false)
-        clicked = false;
+        *clicked = false;
     for (size_t i = 0; i < gm->dialog.size(); i++) {
         if (character.compare("Transition") != 0)
             gm->getWindow()->getWindow()->draw(gm->dialog[i]);
@@ -42,17 +39,13 @@ int dialogScreen(game *gm, string character)
             }
         }
     }
-    while (gm->getWindow()->getWindow()->pollEvent(event)) {
-        if (event.type == sf::Event::Closed)
-            gm->getWindow()->getWindow()->close();
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) == true && isPressed == 0) {
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) == true && (*isPressed) == 0) {
         gm->texts.clear();
-        isPressed = 1;
+        (*isPressed) = 1;
         gm->person += 1;
         character = dialog(&gm);
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) == false)
-        isPressed = 0;
+        (*isPressed) = 0;
     return 0;
 }

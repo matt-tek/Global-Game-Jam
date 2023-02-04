@@ -22,7 +22,7 @@ class button {
 
 class diaryButton : public button {
     public:
-    void effect() override {
+    void effect(void) override {
         cout << "Hello\n";
     }
 
@@ -49,7 +49,7 @@ class diaryButton : public button {
         window->draw(text);
     }
 
-    int isMouseOnButton(sf::Vector2f mousePos)
+    int isMouseOnButton(game *gm, sf::Vector2f mousePos)
     {
         if (hitBox.contains(mousePos) == true &&
             sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
