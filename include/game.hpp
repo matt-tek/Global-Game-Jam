@@ -14,6 +14,8 @@ class game
     public:
         static game *instance;
         std::vector<std::shared_ptr<player>> players;
+        vector<sf::Text> dialog;
+        sf::Font font;
         
         game();
         ~game();
@@ -29,3 +31,5 @@ class game
 
         bool loadPlayers(std::string pl);
 };
+
+void dialog(game **gm, int person);

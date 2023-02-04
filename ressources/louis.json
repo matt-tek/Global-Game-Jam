@@ -2,32 +2,35 @@
     "text": [
         {
             "id": 1,
-            "text": "Hello, I'm Louis. I'm a bot that can help you find the best places to eat in your area. What's your name?",
+            "text": "Hello , I'm Louis . I'm a bot that can help you find the best places to eat in your area . What's your name ?",
             "dependsOn": [
                 
             ],
-            "clickable_word": ["Louis"]
+            "clickable_words": ["Louis", "bot", "help", "area"]
         },
         {
             "id": 2,
-            "text": "étape 2",
+            "text": "This is a complete to test wether the breakline works correctly",
             "dependsOn": [
                 "Nadia:2"
-            ]
+            ],
+            "clickable_words": ["complete", "wether", "breakline"]
         },
         {
             "id": 3,
             "text": "étape 3",
             "dependsOn": [
 
-            ]
+            ],
+            "clickable_words": ["Louis"]
         },
         {
             "id": 4,
             "text": "étape 4",
             "dependsOn": [
 
-            ]
+            ],
+            "clickable_words": ["Louis"]
         }
     ]
 }
