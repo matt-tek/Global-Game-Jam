@@ -101,8 +101,8 @@ int isSingleChar(std::string str)
 
 void player::talk(game **gm) {
     sf::Text text;
-    float offset = 400;
-    float y = 750;
+    float offset = 280;
+    float y = 740;
     vector<string> vec;
 
     std::cout << this->parole[this->value]->parole << std::endl;
@@ -112,8 +112,8 @@ void player::talk(game **gm) {
     (*gm)->dialog.clear();
     text.setFont((*gm)->font);
     for (size_t i = 0; i < vec.size(); i++) {
-        if (offset >= 1600) {
-            offset = 400;
+        if (offset >= 1800) {
+            offset = 280;
             y += 80;
         }
         text.setCharacterSize(50);

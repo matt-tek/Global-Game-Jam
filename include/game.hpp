@@ -15,6 +15,7 @@ class game
         static game *instance;
         std::vector<std::shared_ptr<player>> players;
         vector<sf::Text> dialog;
+        sf::RectangleShape dialogPannel;
         sf::Font font;
         
         game();
@@ -33,3 +34,6 @@ class game
 };
 
 void dialog(game **gm, int person);
+sf::RectangleShape initRectangleShape(sf::Vector2f position,
+    sf::Color fillColor, float outlineThickness, sf::Color outlineColor,
+    sf::Vector2f size);
