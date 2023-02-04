@@ -1,6 +1,6 @@
 #include "game.hpp"
 
-int dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
+string dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
 screens currentScreen = dialog_screen;
 
 int main(void)
@@ -29,7 +29,7 @@ int main(void)
                 gm->getWindow()->getWindow()->close();
         }
         if (currentScreen == dialog_screen) {
-            dialogScreen(gm, character, &isPressed, &clicked);
+            character = dialogScreen(gm, character, &isPressed, &clicked);
         }
         gm->getWindow()->getWindow()->display();
     }

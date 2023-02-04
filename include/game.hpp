@@ -23,6 +23,55 @@ class button {
     virtual void effect(void) = 0;
 };
 
+class goBackButton : public button {
+    public:
+    void effect(void) override {
+        currentScreen = dialog_screen;
+    }
+
+    void initButtonRectangleShape(sf::Vector2f position,
+        sf::Color fillColor, float outlineThickness, sf::Color outlineColor,
+        sf::Vector2f size)
+    {
+        rect.setPosition(position);
+        rect.setFillColor(fillColor);
+        rect.setOutlineThickness(outlineThickness);
+        rect.setOutlineColor(outlineColor);
+        rect.setSize(size);
+
+        hitBox.width = size.x;
+        hitBox.height = size.y;
+        hitBox.top = position.y;
+        hitBox.left = position.x;
+        return;
+    }
+
+    void drawButton(sf::RenderWindow *window)
+    {
+        window->draw(rect);
+        window->draw(text);
+    }
+
+    int isMouseOnButton(sf::Vector2f mousePos)
+    {
+        if (hitBox.contains(mousePos) == true &&
+            sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
+            isMouseClicked == false) {
+            this->effect();
+            isMouseClicked = true;
+            return 1;
+        }
+        return 0;
+    }
+
+    bool isMouseClicked = false;
+    sf::FloatRect hitBox;
+    sf::Vector2f position;
+    sf::Font font;
+    sf::Text text;
+    sf::RectangleShape rect;
+};
+
 class diaryButton : public button {
     public:
     void effect(void) override {

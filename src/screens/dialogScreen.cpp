@@ -7,7 +7,12 @@
 
 #include "game.hpp"
 
-int dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
+int diaryScreen(game *gm)
+{
+    return 0;
+}
+
+string dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
 {
     sf::Vector2i mouse;
 
@@ -47,5 +52,5 @@ int dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
     }
     else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) == false)
         (*isPressed) = 0;
-    return 0;
+    return character;
 }
