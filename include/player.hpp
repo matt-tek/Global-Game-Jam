@@ -8,6 +8,12 @@
 
 class game;
 
+class Sprite {
+    public:
+    sf::Sprite sprite;
+    sf::Texture texture;
+};
+
 class player
 {
 public:
@@ -16,6 +22,10 @@ public:
     std::string name;
     int value;
     game *gm;
+
+    Sprite sprite;
+    Sprite profilePic;
+
     std::map<int, std::shared_ptr<text>> parole;
     std::vector<std::vector<std::string>> clickableWords;
 

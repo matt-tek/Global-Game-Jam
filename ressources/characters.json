@@ -1,12 +1,22 @@
 {
     "caracters": [
         {
-            "name": "Nadia",
-            "file": "./ressources/nadia.json"
+            "name": "Narrator",
+            "file": "./ressources/narrator.json",
+            "sprite": "./ressources/catherine.json",
+            "profile_picture": "./ressources/catherine.json"
         },
         {
-            "name": "Louis",
-            "file": "./ressources/louis.json"
+            "name": "Catherine",
+            "file": "./ressources/catherine.json",
+            "sprite": "./assets/sprites/Catherine_1.png",
+            "profile_picture": "./assets/sprites/CatherineHead.png"
+        },
+        {
+            "name": "Agathe",
+            "file": "./ressources/agathe.json",
+            "sprite": "./assets/sprites/Agathe_1.png",
+            "profile_picture": "./assets/sprites/AgatheHead.png"
         }
     ]
 }

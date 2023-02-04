@@ -7,12 +7,12 @@
 
 #include "game.hpp"
 
-void dialog(game **gm, int person)
+string dialog(game **gm, int person)
 {
-    vector<string> dialog = {"Louis", "Louis", "Nadia", "Nadia", "Louis", "Louis"};
+    vector<string> dialog = {"Catherine", "Catherine", "Agathe", "Narrator"};
 
     if (person > dialog.size() - 1)
-        return;
+        return "Err";
     (*gm)->getPlayer(dialog[person]).talk(gm);
-    return;
+    return dialog[person];
 }

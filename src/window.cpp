@@ -11,7 +11,7 @@ void windowClass::createWindow(int width, int height, std::string window_name)
 {
     mode.width = width;
     mode.height = height;
-    window.create(mode, window_name);
+    window.create(sf::VideoMode::getDesktopMode(), window_name);
     return;
 }
 

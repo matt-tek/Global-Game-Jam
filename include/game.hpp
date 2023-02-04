@@ -126,12 +126,21 @@ class game
         static game *instance;
         diaryButton diaryBut;
         treeButton treeBut;
+        map<std::string, int> playerId;
         std::vector<std::shared_ptr<player>> players;
         vector<sf::Text> dialog;
         sf::RectangleShape dialogPannel;
 
         sf::Font font;
         
+        void displayCharacter(string character)
+        {
+            if (this->playerId[character] != 0) {
+                getWindow()->getWindow()->draw(players[this->playerId[character]]->sprite.sprite);
+                getWindow()->getWindow()->draw(players[this->playerId[character]]->profilePic.sprite);
+            }
+        }
+
         game();
         ~game();
 
@@ -147,7 +156,11 @@ class game
         bool loadPlayers(std::string pl);
 };
 
-void dialog(game **gm, int person);
+string dialog(game **gm, int person);
 sf::RectangleShape initRectangleShape(sf::Vector2f position,
     sf::Color fillColor, float outlineThickness, sf::Color outlineColor,
     sf::Vector2f size);
+void setupDiaryButton(game **gm);
+void setupTreeButton(game **gm);
+void createText(sf::Text *text, sf::Font *font, string fontPath,
+    string content, float charSize, sf::Vector2f position, sf::Color fillColor);
