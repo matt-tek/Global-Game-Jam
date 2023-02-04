@@ -19,8 +19,12 @@ class notebook : public sf::Drawable
         void draw(sf::RenderTarget &target, sf::RenderStates states) const;
         sf::Sprite sprite;
         sf::Texture texture;
+        sf::Font font;
+        sf::Text parole;
+        int value = 0;
         notebook();
         ~notebook();
+        void update();
         bool loadNotebook(std::string path);
         std::vector<std::shared_ptr<notebooktext>> text;
 };

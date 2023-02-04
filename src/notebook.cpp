@@ -8,10 +8,22 @@ notebook::notebook()
     this->texture.loadFromFile("./assets/notebook.png");
     this->sprite.setTexture(texture);
     this->sprite.setScale(4, 4);
+    loadNotebook("./ressources/notebook.json");
+    this->font.loadFromFile("./assets/fonts/arial.ttf");
+    this->parole.setFont(this->font);
+    this->parole.setString(this->text[this->value]->text);
+    this->parole.setCharacterSize(50);
+    this->parole.setPosition((sf::Vector2f){20, 20});
+    this->parole.setFillColor(sf::Color::Black);
 }
 
 notebook::~notebook()
 {
+}
+
+void notebook::update()
+{
+    this->parole.setString(this->text[this->value]->text);
 }
 
 bool notebook::loadNotebook(std::string path)
@@ -37,6 +49,6 @@ bool notebook::loadNotebook(std::string path)
 
 void notebook::draw(sf::RenderTarget &target, sf::RenderStates states) const
 {
-
     target.draw(this->sprite);
+    target.draw(this->parole);
 }

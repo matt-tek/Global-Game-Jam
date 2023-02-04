@@ -52,10 +52,8 @@ bool player::loadjson(std::string file) {
         return false;
     }
     this->clickableWords.push_back(words);
-    std::cout << "Loading player " << this->name << std::endl;
     Json::Value tex = root["text"];
     for (auto &it : tex) {
-        std::cout << "Loading text " << it["id"].asInt() << std::endl;
         if (this->parole[it["id"].asInt()] != nullptr) {
             this->parole[it["id"].asInt()]->parole = it["text"].asString();
         } else {
@@ -105,7 +103,6 @@ void player::talk(game **gm) {
     float y = 750;
     vector<string> vec;
 
-    std::cout << this->parole[this->value]->parole << std::endl;
     this->parole[this->value]->validate = true;
     vec = split(this->parole[this->value]->parole.c_str(), " ");
     (*gm)->font.loadFromFile("./assets/fonts/arial.ttf");

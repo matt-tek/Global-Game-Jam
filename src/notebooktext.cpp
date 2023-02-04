@@ -19,4 +19,5 @@ bool notebooktext::loadText(Json::Value root)
         std::cerr << "Error: " << e.what() << std::endl;
         return (false);
     }
+    return (true);
 }
