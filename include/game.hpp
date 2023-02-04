@@ -2,6 +2,7 @@
 
 #include "include.hpp"
 #include "window.hpp"
+#include "Animation.hpp"
 
 #pragma once
 
@@ -17,6 +18,7 @@ class game
         vector<sf::Text> dialog;
         sf::RectangleShape dialogPannel;
         sf::Font font;
+        Animation *Anim;
         
         game();
         ~game();

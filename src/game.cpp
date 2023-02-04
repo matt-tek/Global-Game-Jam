@@ -12,7 +12,7 @@ game *game::getInstance() {
 
 game::game()
 {
-
+    this->Anim = new Animation;
 }
 
 game::~game()
