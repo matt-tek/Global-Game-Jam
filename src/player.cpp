@@ -69,9 +69,18 @@ bool player::loadjson(std::string file) {
     return true;
 }
 
-void player::talk(void) {
+void player::talk(game **gm) {
+    (*gm)->font.loadFromFile("./assets/fonts/arial.ttf");
+
     std::cout << this->parole[this->value]->parole << std::endl;
     this->parole[this->value]->validate = true;
+
+    (*gm)->dialog.setFont((*gm)->font);
+    (*gm)->dialog.setCharacterSize(50);
+    (*gm)->dialog.setString(this->parole[this->value]->parole);
+    (*gm)->dialog.setFillColor(sf::Color::White);
+    (*gm)->dialog.setPosition((sf::Vector2f){0, 0});
+
     if (this->parole[value]->isNext() && this->parole.size() != this->value) {
         this->value += 1;
     }

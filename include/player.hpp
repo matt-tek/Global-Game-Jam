@@ -1,12 +1,7 @@
 
 #pragma once
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <vector>
-#include <memory>
-#include <map>
+#include "include.hpp"
 #include "text.hpp"
 
 #include <json/json.h>
@@ -33,5 +28,5 @@ public:
 
     bool loadjson(std::string file);
 
-    void talk(void);
+    void talk(game **gm);
 };

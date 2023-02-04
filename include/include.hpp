@@ -5,6 +5,11 @@
 ** include
 */
 
+#include <string>
+#include <fstream>
+#include <vector>
+#include <memory>
+#include <map>
 #include <iostream>
 #include <fstream>
 #include <vector>
