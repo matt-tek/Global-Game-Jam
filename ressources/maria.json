@@ -1,0 +1,20 @@
+{
+    "text": [
+        {
+            "id": 1,
+            "text": "Hi I'm Maria this is a test",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Catherine"]
+        },
+        {
+            "id": 2,
+            "text": "hey James",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        }
+    ]
+}
