@@ -7,6 +7,7 @@ int main(void)
     int person = 0;
     int isPressed = 0;
     sf::Vector2i mouse;
+    bool clicked = false;
 
     gm->loadPlayers("./ressources/characters.json");
     gm->getWindow()->createWindow(1920, 1080, "name");
@@ -28,14 +29,33 @@ int main(void)
         mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
         gm->diaryBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
         gm->treeBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
-        for (size_t i = 0; i < gm->dialog.size(); i++)
+        
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == false)
+            clicked = false;
+        for (size_t i = 0; i < gm->dialog.size(); i++) {
             gm->getWindow()->getWindow()->draw(gm->dialog[i]);
+            if (gm->texts[i].isClickable == true) {
+                //gm->getWindow()->getWindow()->draw(gm->texts[i].rect);
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == true &&
+                    gm->texts[i].hitbox.contains(sf::Vector2f(mouse.x, mouse.y)) == true &&
+                    gm->texts[i].collected == false) {
+                    gm->collectedWords.push_back(gm->texts[i].str);
+                    for (size_t y = 0; y < gm->collectedWords.size(); y++)
+                        cout << "[" << gm->collectedWords[y] << "], ";
+                    cout << endl;
+                    gm->texts[i].collected = true;
+                    cout << "Clicked a word" << endl;
+                    break;
+                }
+            }
+        }
         gm->getWindow()->getWindow()->display();
         while (gm->getWindow()->getWindow()->pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 gm->getWindow()->getWindow()->close();
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space) == true && isPressed == 0) {
+            gm->texts.clear();
             isPressed = 1;
             person += 1;
             character = dialog(&gm, person);

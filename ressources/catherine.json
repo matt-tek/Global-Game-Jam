@@ -6,7 +6,7 @@
             "dependsOn": [
                 
             ],
-            "clickable_words": ["Catherine"]
+            "clickable_words": ["Catherine", "is"]
         },
         {
             "id": 2,

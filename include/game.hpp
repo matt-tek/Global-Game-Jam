@@ -118,17 +118,29 @@ class treeButton : public button {
     sf::RectangleShape rect;
 };
 
+class clickWord {
+    public:
+    bool isClickable;
+    sf::RectangleShape rect;
+    sf::FloatRect hitbox;
+    bool collected;
+    string str;
+    private:
+};
+
 class game
 {
     private:
         windowClass win;
     public:
+        vector<string> collectedWords;
         static game *instance;
         diaryButton diaryBut;
         treeButton treeBut;
         map<std::string, int> playerId;
         std::vector<std::shared_ptr<player>> players;
         vector<sf::Text> dialog;
+        vector<clickWord> texts;
         sf::RectangleShape dialogPannel;
 
         sf::Font font;
