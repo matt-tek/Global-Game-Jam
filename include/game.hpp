@@ -11,8 +11,11 @@ using namespace std;
 typedef enum screens_s {
     main_menu,
     dialog_screen,
-    diary_screen
+    diary_screen,
+    tree_screen
 } screens;
+
+extern screens currentScreen;
 
 class button {
     private:
@@ -23,7 +26,7 @@ class button {
 class diaryButton : public button {
     public:
     void effect(void) override {
-        cout << "Hello\n";
+        currentScreen = diary_screen;
     }
 
     void initButtonRectangleShape(sf::Vector2f position,
@@ -49,7 +52,7 @@ class diaryButton : public button {
         window->draw(text);
     }
 
-    int isMouseOnButton(game *gm, sf::Vector2f mousePos)
+    int isMouseOnButton(sf::Vector2f mousePos)
     {
         if (hitBox.contains(mousePos) == true &&
             sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
@@ -72,7 +75,7 @@ class diaryButton : public button {
 class treeButton : public button {
     public:
     void effect () override {
-        cout << "Tree\n";
+        currentScreen = tree_screen;
     }
 
     void initButtonRectangleShape(sf::Vector2f position,
@@ -135,7 +138,6 @@ class game
     private:
         windowClass win;
     public:
-        screens currentScreen = dialog_screen;
         vector<string> collectedWords;
         static game *instance;
         diaryButton diaryBut;

@@ -1,6 +1,7 @@
 #include "game.hpp"
 
 int dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
+screens currentScreen = dialog_screen;
 
 int main(void)
 {
@@ -27,7 +28,7 @@ int main(void)
             if (event.type == sf::Event::Closed)
                 gm->getWindow()->getWindow()->close();
         }
-        if (gm->currentScreen == dialog_screen) {
+        if (currentScreen == dialog_screen) {
             dialogScreen(gm, character, &isPressed, &clicked);
         }
         gm->getWindow()->getWindow()->display();
