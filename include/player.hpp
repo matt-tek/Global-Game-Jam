@@ -17,6 +17,7 @@ public:
     int value;
     game *gm;
     std::map<int, std::shared_ptr<text>> parole;
+    std::vector<std::vector<std::string>> clickableWords;
 
     std::string &getName();
 

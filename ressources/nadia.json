@@ -2,31 +2,35 @@
     "text": [
         {
             "id": 1,
-            "text": "Hello, I'm Nadia. I'm a bot that can help you find the best places to eat in your area. What's your name?",
+            "text": "Hello , I'm Nadia . I'm a bot that can help you find the best places to eat in your area . What's your name ?",
             "dependsOn": [
                 
-            ]
+            ],
+            "clickable_words": ["Hello"]
         },
         {
             "id": 2,
             "text": "étape 2",
             "dependsOn": [
 
-            ]
+            ],
+            "clickable_words": ["Hello"]
         },
         {
             "id": 3,
             "text": "étape 3",
             "dependsOn": [
 
-            ]
+            ],
+            "clickable_words": ["Hello"]
         },
         {
             "id": 4,
             "text": "étape 4",
             "dependsOn": [
 
-            ]
+            ],
+            "clickable_words": ["Hello"]
         }
     ]
 }

@@ -12,7 +12,9 @@ int main(void)
     dialog(&gm, person);
     while (gm->getWindow()->getWindow()->isOpen()) {
         gm->getWindow()->getWindow()->clear();
-        gm->getWindow()->getWindow()->draw(gm->dialog);
+        for (size_t i = 0; i < gm->dialog.size(); i++) {
+            gm->getWindow()->getWindow()->draw(gm->dialog[i]);
+        }
         gm->getWindow()->getWindow()->display();
         while (gm->getWindow()->getWindow()->pollEvent(event)) {
             if (event.type == sf::Event::Closed)

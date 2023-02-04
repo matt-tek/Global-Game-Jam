@@ -12,6 +12,7 @@
 #include <map>
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <vector>
 #include <memory>
 #include "player.hpp"

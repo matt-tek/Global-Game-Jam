@@ -9,7 +9,7 @@
 
 void dialog(game **gm, int person)
 {
-    vector<string> dialog = {"Nadia", "Nadia", "Louis"};
+    vector<string> dialog = {"Louis", "Louis", "Nadia", "Nadia", "Louis", "Louis"};
 
     if (person > dialog.size() - 1)
         return;
