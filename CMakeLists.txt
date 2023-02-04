@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.0)
 
+set(CMAKE_BUILD_TYPE Release)
+
 project("json")
 
 set(CMAKE_CXX_STANDARD 20)
@@ -10,6 +12,8 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 include(FetchContent)
 
 set(SFML_VERSION 2.5.1)
+
+set(FETCHCONTENT_QUIET OFF)
 
 FetchContent_Declare(
     sfml
@@ -51,5 +55,7 @@ target_link_libraries(${PROJECT_NAME} jsoncpp_lib)
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
 
 FILE(COPY ${PROJECT_SOURCE_DIR}/ressources DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+FILE(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR})
 
 

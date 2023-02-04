@@ -1,4 +1,5 @@
 #include "game.hpp"
+#include "notebook.hpp"
 
 int main(void)
 {
@@ -6,6 +7,8 @@ int main(void)
     sf::Event event;
     int person = 0;
     int isPressed = 0;
+    notebook *note = new notebook();
+    
 
     gm->loadPlayers("./ressources/characters.json");
     gm->getWindow()->createWindow(1920, 1080, "name");
@@ -15,6 +18,7 @@ int main(void)
         for (size_t i = 0; i < gm->dialog.size(); i++) {
             gm->getWindow()->getWindow()->draw(gm->dialog[i]);
         }
+        gm->getWindow()->getWindow()->draw(*note);
         gm->getWindow()->getWindow()->display();
         while (gm->getWindow()->getWindow()->pollEvent(event)) {
             if (event.type == sf::Event::Closed)
