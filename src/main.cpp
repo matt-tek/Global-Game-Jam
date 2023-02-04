@@ -1,6 +1,8 @@
 #include "game.hpp"
 
 string dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
+int diaryScreen(game *gm);
+int treeScreen(game *gm);
 screens currentScreen = dialog_screen;
 
 int main(void)
@@ -18,6 +20,7 @@ int main(void)
 
     setupDiaryButton(&gm);
     setupTreeButton(&gm);
+    setupGoBackButton(&gm);
 
     gm->dialogPannel = initRectangleShape((sf::Vector2f){4, 707},
         sf::Color(0, 0, 0, 0), 4, sf::Color::White, (sf::Vector2f){1910, 300});
@@ -28,9 +31,12 @@ int main(void)
             if (event.type == sf::Event::Closed)
                 gm->getWindow()->getWindow()->close();
         }
-        if (currentScreen == dialog_screen) {
+        if (currentScreen == dialog_screen)
             character = dialogScreen(gm, character, &isPressed, &clicked);
-        }
+        else if (currentScreen == diary_screen)
+            diaryScreen(gm);
+        else if (currentScreen == tree_screen)
+            treeScreen(gm);
         gm->getWindow()->getWindow()->display();
     }
     return (0);

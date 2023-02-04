@@ -189,6 +189,7 @@ class game
     public:
         vector<string> collectedWords;
         static game *instance;
+        goBackButton goBackBut;
         diaryButton diaryBut;
         treeButton treeBut;
         map<std::string, int> playerId;
@@ -232,3 +233,4 @@ void setupDiaryButton(game **gm);
 void setupTreeButton(game **gm);
 void createText(sf::Text *text, sf::Font *font, string fontPath,
     string content, float charSize, sf::Vector2f position, sf::Color fillColor);
+void setupGoBackButton(game **gm);

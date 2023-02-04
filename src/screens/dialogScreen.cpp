@@ -9,6 +9,29 @@
 
 int diaryScreen(game *gm)
 {
+    sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
+
+    gm->goBackBut.drawButton(gm->getWindow()->getWindow());
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+        if (gm->goBackBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
+            gm->diaryBut.isMouseClicked = false;
+            gm->goBackBut.isMouseClicked = false;
+        }
+    }
+    return 0;
+}
+
+int treeScreen(game *gm)
+{
+    sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
+
+    gm->goBackBut.drawButton(gm->getWindow()->getWindow());
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+        if (gm->goBackBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
+            gm->goBackBut.isMouseClicked = false;
+            gm->treeBut.isMouseClicked = false;
+        }
+    }
     return 0;
 }
 
