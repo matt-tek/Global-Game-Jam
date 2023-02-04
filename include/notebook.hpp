@@ -26,5 +26,6 @@ class notebook : public sf::Drawable
         ~notebook();
         void update();
         bool loadNotebook(std::string path);
+        std::vector<std::shared_ptr<std::string>> tickets;
         std::vector<std::shared_ptr<notebooktext>> text;
 };

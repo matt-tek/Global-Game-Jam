@@ -23,7 +23,11 @@ notebook::~notebook()
 
 void notebook::update()
 {
+    std::string test = this->text[this->value]->text.substr(this->text[this->value]->text.find("_"), this->text[this->value]->text.size());
+
     this->parole.setString(this->text[this->value]->text);
+    
+
 }
 
 bool notebook::loadNotebook(std::string path)

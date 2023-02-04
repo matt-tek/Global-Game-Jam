@@ -36,14 +36,11 @@ bool game::loadPlayers(std::string pl) {
     if (!reader.parse(ifs, root)) {
         return false;
     }
-    std::cout << "Loading players" << std::endl;
     for (auto &it : root["caracters"]) {
         this->players.push_back(std::shared_ptr<player>(new player(it["name"].asString(), this)));
     }
-    std::cout << "Loading players files" << std::endl;
     for (auto &it : root["caracters"]) {
         this->getPlayer(it["name"].asString()).loadjson(it["file"].asString());
     }
-    std::cout << "Loading players files done" << std::endl;
     return true;
 }
