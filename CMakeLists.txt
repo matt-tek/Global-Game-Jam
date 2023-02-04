@@ -47,7 +47,6 @@ add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME} jsoncpp_lib)
 
-
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
 
 FILE(COPY ${PROJECT_SOURCE_DIR}/ressources DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

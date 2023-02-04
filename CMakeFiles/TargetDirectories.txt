@@ -1,3 +1,0 @@
-/home/lennygarnier/Delivery/Global-Game-Jam-/CMakeFiles/json.dir
-/home/lennygarnier/Delivery/Global-Game-Jam-/CMakeFiles/edit_cache.dir
-/home/lennygarnier/Delivery/Global-Game-Jam-/CMakeFiles/rebuild_cache.dir
