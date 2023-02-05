@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Je propose qu'on lève tous notre verre à James. Puisse-t-il être heureux dans l'autre monde.",
+            "text": "Je propose qu'on lève tous notre verre en son honneur. Puisse-t-il être heureux dans l'autre monde.",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "text": "Notre bon à rien de neuveu va nous mettre dans la merde carlos ! ",
+            "text": "Notre bon à rien de neuveu va nous mettre dans la merde Carlos ! ",
             "dependsOn": [
                 
             ],
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "text": "Il a déduit que les derniers meutres étaient lier à la famille, il va nous trahir",
+            "text": "Il a déduit que les derniers meutres avaient un rapport avec la famille, il va nous trahir",
             "dependsOn": [
                 
             ],

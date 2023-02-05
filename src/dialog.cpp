@@ -12,7 +12,7 @@ vector<string> introduction = {{"Catherine", "James", "Catherine", "James",
 
 vector<string> breakfast = {{"Julia", "Catherine", "James", "Agathe", "Catherine", "Agathe", "Catherine", "Agathe", "Catherine" ,"Julia", "Elize" ,"Elize", "Julia", "Elize", "Julia", "Elize"}};
 
-vector<string> diner = {{"Elize", "Julia", "Victor", "Elize", "Catherine", "Diego", "Agathe", "Carlos", "Pablo", "Victor"}};
+vector<string> diner = {{"Elize", "Julia", "Victor", "Elize", "Catherine", "Diego", "Agathe", "Elize", "Carlos", "Pablo", "Victor"}};
 
 vector<string> cousin_meet = {{"James", "Diego", "James", "Diego", "James", "Diego", "James"}};
 
@@ -24,10 +24,17 @@ vector<string> murder = {{"Elize", "James", "Elize"}};
 
 vector <string> bonus = {{"Pablo", "Carlos", "Pablo", "Carlos", "Pablo", "Carlos", "Pablo", "Carlos"}};
 
-vector<vector<string>> history = {introduction, breakfast};
+vector<string> bgs = {"./assets/sprites/salon.jpg",
+    "./assets/sprites/kwizine.png", "./assets/sprites/dining_2.jpg",
+    "./assets/sprites/garden.jpg", "./assets/sprites/billiard.jpg",
+    "./assets/sprites/night_club.jpg", "./assets/sprites/room.jpg"};
+
+vector<vector<string>> history = {introduction, breakfast, diner, cousin_meet,
+    bad_meet, bar_meet, murder, bonus};
 
 string dialog(game **gm)
 {
+    setlocale(LC_ALL, "");
     cout << (*gm)->currentScene << endl;
     if ((*gm)->person > history[(*gm)->currentScene].size() - 1) {
         if ((*gm)->currentScene >= history.size() - 1) {
@@ -35,6 +42,11 @@ string dialog(game **gm)
             return "End of scenario";
         }
         (*gm)->currentScene += 1;
+
+        (*gm)->texture.loadFromFile(bgs[(*gm)->currentScene]);
+        (*gm)->bg.setTexture((*gm)->texture);
+        (*gm)->bg.setScale(sf::Vector2f(1.71, 1.71));
+
         (*gm)->person = -1;
         return "Transition";
     }

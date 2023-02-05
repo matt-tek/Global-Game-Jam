@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Je m'en occupe...",
+            "text": "Restez assis, je vais aller lui parler...",
             "dependsOn": [
                 
             ],
@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "text": "Chaque chose en son temps par le tous puissant, suis mon dessin et tous se passera proprement",
+            "text": "Chaque chose en son temps par le tout puissant, suis mon dessein et tous se passera proprement",
             "dependsOn": [
                 
             ],
@@ -26,7 +26,7 @@
         },
         {
             "id": 4,
-            "text": "Elle sera impliqué dans tous les cas, tu dois pour dire la vérité ",
+            "text": "Elle sera impliqué dans tous les cas si veux lui dire la vérité ",
             "dependsOn": [
                 
             ],
@@ -42,7 +42,7 @@
         },
         {
             "id": 6,
-            "text": "Qu'es ce que j'en ai à foutre ? ",
+            "text": "Qu'est-ce que j'en ai à foutre ? ",
             "dependsOn": [
                 
             ],

@@ -1,4 +1,5 @@
 #include "game.hpp"
+#include <wchar.h>
 
 string dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
 int diaryScreen(game *gm);
@@ -22,6 +23,7 @@ int initDiary(game *gm)
     sf::RectangleShape rect;
     sf::FloatRect hitbox;
     int y = 0;
+    setlocale(LC_ALL, "");
 
     for (size_t j = 0; j < str.size(); j++) {
         int offset = 650;
@@ -67,6 +69,10 @@ int main(void)
     string character;
     character = dialog(&gm);
 
+    gm->texture.loadFromFile("./assets/sprites/salon.jpg");
+    gm->bg.setTexture(gm->texture);
+    gm->bg.setScale(sf::Vector2f(1.71, 1.71));
+
     initDiary(gm);
     setupDiaryButton(&gm);
     setupTreeButton(&gm);
@@ -79,6 +85,7 @@ int main(void)
 
     while (gm->getWindow()->getWindow()->isOpen()) {
         gm->getWindow()->getWindow()->clear();
+        gm->getWindow()->getWindow()->draw(gm->bg);
         while (gm->getWindow()->getWindow()->pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 gm->getWindow()->getWindow()->close();

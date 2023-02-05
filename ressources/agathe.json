@@ -17,7 +17,7 @@
         },
         {
             "id": 3,
-            "text":  "t'es sérieuse, tu devrais être aussi silencieuse que Elise si tu veux pas que je dévoile des choses.",
+            "text":  "t'es sérieuse, tu te prends pour Elize à chercher des embrouilles ?",
             "dependsOn": [
             ],
             "clickable_words": ["James"]

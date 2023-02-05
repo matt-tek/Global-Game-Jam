@@ -34,7 +34,7 @@
         },
         {
             "id": 5,
-            "text": "bon ca y est, il est mort , on va pas rester comme ca indéfiniement",
+            "text": "bon, ça fait un mois on va pas rester comme ca indéfiniement",
             "dependsOn": [
                 
             ],
@@ -42,7 +42,7 @@
         },
         {
             "id": 6,
-            "text": "Peut-être mais moi je ne tolère pas ta présence.",
+            "text": "Je ne tolère pas ta présence pourtant moi je dis rien.",
             "dependsOn": [
                 
             ],
@@ -50,7 +50,7 @@
         },
         {
             "id": 7,
-            "text": "Bonsoir, qui êtes vous ?",
+            "text": "Si c'est proposé si gentillement...",
             "dependsOn": [
                 
             ],
@@ -58,7 +58,7 @@
         },
         {
             "id": 8,
-            "text": "Hm...expliquez vous",
+            "text": "Bonsoir, qui êtes vous ?",
             "dependsOn": [
                 
             ],
@@ -66,7 +66,7 @@
         },
         {
             "id": 9,
-            "text": "Ca expliquerai beaucoup de chose...",
+            "text": "Hm...expliquez vous",
             "dependsOn": [
                 
             ],
@@ -74,7 +74,7 @@
         },
         {
             "id": 10,
-            "text": "James...Je suis désolée mais je dois me débarasser de toi",
+            "text": "Ca expliquerai beaucoup de chose...",
             "dependsOn": [
                 
             ],
@@ -82,6 +82,14 @@
         },
         {
             "id": 11,
+            "text": "James...Je suis désolée mais je dois me débarasser de toi",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Julia"]
+        },
+        {
+            "id": 12,
             "text": "Non, je veux ma vraie famille, je veux être heureuse",
             "dependsOn": [
                 

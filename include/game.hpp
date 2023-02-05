@@ -422,6 +422,8 @@ class game
         std::vector<std::shared_ptr<sf::Sprite>> person_spr;
         int currentScene = 0;
         int person = 0;
+        sf::Sprite bg;
+        sf::Texture texture;
 
         sf::Font font;
         
