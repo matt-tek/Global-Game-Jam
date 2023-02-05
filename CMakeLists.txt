@@ -54,3 +54,5 @@ target_link_libraries(${PROJECT_NAME} jsoncpp_lib)
 target_link_libraries(${PROJECT_NAME} sfml-graphics sfml-window sfml-system)
 
 FILE(COPY ${PROJECT_SOURCE_DIR}/ressources DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+FILE(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

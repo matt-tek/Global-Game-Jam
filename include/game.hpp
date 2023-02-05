@@ -54,6 +54,11 @@ class goBackButton : public button {
 
     int isMouseOnButton(sf::Vector2f mousePos)
     {
+        if (hitBox.contains(mousePos)) {
+            this->text.setFillColor(sf::Color::Red);
+        } else {
+            this->text.setFillColor(sf::Color::White);
+        }
         if (hitBox.contains(mousePos) == true &&
             sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
             isMouseClicked == false) {
@@ -103,6 +108,11 @@ class diaryButton : public button {
 
     int isMouseOnButton(sf::Vector2f mousePos)
     {
+        if (hitBox.contains(mousePos)) {
+            this->text.setFillColor(sf::Color::Red);
+        } else {
+            this->text.setFillColor(sf::Color::White);
+        }
         if (hitBox.contains(mousePos) == true &&
             sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
             isMouseClicked == false) {
@@ -152,6 +162,11 @@ class treeButton : public button {
 
     int isMouseOnButton(sf::Vector2f mousePos)
     {
+        if (hitBox.contains(mousePos)) {
+            this->text.setFillColor(sf::Color::Red);
+        } else {
+            this->text.setFillColor(sf::Color::White);
+        }
         if (hitBox.contains(mousePos) == true &&
             sf::Mouse::isButtonPressed(sf::Mouse::Left) == true &&
             isMouseClicked == false) {
@@ -161,6 +176,60 @@ class treeButton : public button {
         }
         if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == false)
             isMouseClicked = false;
+        return 0;
+    }
+
+    bool isMouseClicked = false;
+    sf::FloatRect hitBox;
+    sf::Vector2f position;
+    sf::Font font;
+    sf::Text text;
+    sf::RectangleShape rect;
+};
+
+class PlayButton : public button {
+    public:
+    void effect(void) override {
+        currentScreen = main_menu;
+    }
+
+    void initButtonRectangleShape(sf::Vector2f position,
+        sf::Color fillColor, float outlineThickness, sf::Color outlineColor,
+        sf::Vector2f size)
+    {
+        rect.setPosition(position);
+        rect.setFillColor(fillColor);
+        rect.setOutlineThickness(outlineThickness);
+        rect.setOutlineColor(outlineColor);
+        rect.setSize(size);
+
+        hitBox.width = size.x;
+        hitBox.height = size.y;
+        hitBox.top = position.y;
+        hitBox.left = position.x;
+        return;
+    }
+
+    void drawButton(sf::RenderWindow *window)
+    {
+        window->draw(rect);
+        window->draw(text);
+    }
+
+    int isMouseOnButton(sf::Vector2f mousePos)
+    {
+        if (hitBox.contains(mousePos)) {
+            this->text.setFillColor(sf::Color::Red);
+        } else {
+            this->text.setFillColor(sf::Color::White);
+        }
+        if (hitBox.contains(mousePos) == true &&
+            sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
+            isMouseClicked == false) {
+            this->effect();
+            isMouseClicked = true;
+            return 1;
+        }
         return 0;
     }
 
@@ -202,11 +271,16 @@ class game
         goBackButton goBackBut;
         diaryButton diaryBut;
         treeButton treeBut;
+        PlayButton playBut;
         map<std::string, int> playerId;
         std::vector<std::shared_ptr<player>> players;
         vector<sf::Text> dialog;
         vector<clickWord> texts;
         sf::RectangleShape dialogPannel;
+        sf::Texture bgMenu;
+        sf::Sprite bgMenuSprite;
+        std::vector<std::shared_ptr<sf::Texture>> perso_tex;
+        std::vector<std::shared_ptr<sf::Sprite>> person_spr;
         int currentScene = 0;
         int person = 0;
 

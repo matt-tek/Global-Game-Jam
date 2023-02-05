@@ -3,6 +3,10 @@
 string dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
 int diaryScreen(game *gm);
 int treeScreen(game *gm);
+
+int menuScreen(game *gm);
+void setupPlayButton(game **gm);
+screens currentScreen = screens::main_menu;
 vector<string> split(const string& str, const string& delimiters);
 
 vector<vector<string>> str = {{"My name is James", "James"},
@@ -40,7 +44,6 @@ int initDiary(game *gm)
         sf::Color(0, 0, 0, 0), 4, sf::Color::White, sf::Vector2f(1910, 300));
     return 0;
 }
-screens currentScreen = screens::dialog_screen;
 
 int main(void)
 {
@@ -58,6 +61,7 @@ int main(void)
     setupDiaryButton(&gm);
     setupTreeButton(&gm);
     setupGoBackButton(&gm);
+    setupPlayButton(&gm);
 
     initDiary(gm);
 
@@ -76,6 +80,8 @@ int main(void)
             diaryScreen(gm);
         else if (currentScreen == screens::tree_screen)
             treeScreen(gm);
+        else if (currentScreen == screens::main_menu)
+            menuScreen(gm);
         gm->getWindow()->getWindow()->display();
     }
     return (0);
