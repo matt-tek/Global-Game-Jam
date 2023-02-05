@@ -2,9 +2,23 @@
     "text": [
         {
             "id": 1,
-            "text": "Oui",
+            "text": "Pareil",
             "dependsOn": [
                 
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 2,
+            "text": "bah oui pourquoi ? ",
+            "dependsOn": [
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 3,
+            "text":  "t'es sérieuse, tu devrais être aussi silencieuse que Elise si tu veux pas que je dévoile des choses.",
+            "dependsOn": [
             ],
             "clickable_words": ["James"]
         }
