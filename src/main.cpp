@@ -4,6 +4,39 @@ string dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
 int diaryScreen(game *gm);
 int treeScreen(game *gm);
 screens currentScreen = dialog_screen;
+vector<string> split(const string& str, const string& delimiters);
+
+vector<vector<string>> str = {{"My name is James", "James"},
+    {"I'm dead", "dead"}};
+
+int initDiary(game *gm)
+{
+    sf::Text text;
+    vector<sf::Text> t;
+    vector<sf::RectangleShape> r;
+    sf::RectangleShape rect;
+    vector<string> vec = split(str[0][0], " ");
+    vector<string> hidden = split(str[0][1], " ");
+    int offset = 650;
+    int y = 0;
+
+    gm->diary.text.push_back(t);
+    gm->diary.hide.push_back(r);
+    for (size_t i = 0; i < vec.size(); i++) {
+        createText(&text, &gm->diary.font, "./assets/fonts/arial.ttf",
+            vec[i], 80, sf::Vector2f(offset, 440), sf::Color::White);
+        for (size_t y = 0; y < hidden.size(); y++) {
+            if (hidden[y].compare(vec[i]) == 0) {
+                rect = initRectangleShape(sf::Vector2f(offset, 440), sf::Color::Black, 2,
+                    sf::Color::White, sf::Vector2f(text.getLocalBounds().width, 100));
+                gm->diary.hide[0].push_back(rect);
+            }
+        }
+        gm->diary.text[0].push_back(text);
+        offset += text.getLocalBounds().width + 25.0f;
+    }
+    return 0;
+}
 
 int main(void)
 {
@@ -21,6 +54,8 @@ int main(void)
     setupDiaryButton(&gm);
     setupTreeButton(&gm);
     setupGoBackButton(&gm);
+
+    initDiary(gm);
 
     gm->dialogPannel = initRectangleShape((sf::Vector2f){4, 707},
         sf::Color(0, 0, 0, 0), 4, sf::Color::White, (sf::Vector2f){1910, 300});
