@@ -28,7 +28,7 @@ game::game()
 {
     this->bgMenu.loadFromFile("./assets/sprites/salon.jpg");
     this->bgMenuSprite.setTexture(this->bgMenu);
-    this->bgMenuSprite.setScale((sf::Vector2f){2.5, 3});
+    this->bgMenuSprite.setScale(sf::Vector2f(2.5, 3));
     load("./assets/sprites/Julia_1.png", this->person_spr, this->perso_tex, sf::Vector2f(0, 130));
     load("./assets/sprites/Victor_1.png", this->person_spr, this->perso_tex, sf::Vector2f(1000, 130));
 }
