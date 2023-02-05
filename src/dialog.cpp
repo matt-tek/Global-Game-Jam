@@ -34,6 +34,9 @@ vector<vector<string>> history = {introduction, breakfast, diner, cousin_meet,
 
 string dialog(game **gm)
 {
+    /* (*gm)->correct == true
+    (*gm)->correct = false; */
+
     setlocale(LC_ALL, "");
     cout << (*gm)->currentScene << endl;
     if ((*gm)->person > history[(*gm)->currentScene].size() - 1) {
@@ -41,6 +44,9 @@ string dialog(game **gm)
             (*gm)->getWindow()->getWindow()->close();
             return "End of scenario";
         }
+        if ((*gm)->correct == false)
+            return "Err";
+        (*gm)->correct = false;
         (*gm)->currentScene += 1;
 
         (*gm)->texture.loadFromFile(bgs[(*gm)->currentScene]);

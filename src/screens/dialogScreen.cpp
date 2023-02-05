@@ -51,7 +51,6 @@ int diaryScreen(game *gm)
     gm->diary.copy = gm->submitBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y},
         split(str[gm->currentDiary][1], " "), gm->diary.copy, &gm->correct);
     if (currentScreen == dialog_screen && gm->correct == true) {
-        gm->correct = false;
         gm->diaryBut.isMouseClicked = 0;
         gm->currentDiary += 1;
         gm->diary.copy.clear();

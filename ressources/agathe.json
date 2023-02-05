@@ -20,7 +20,7 @@
             "text":  "t'es sérieuse, tu te prends pour Elize à chercher des embrouilles ?",
             "dependsOn": [
             ],
-            "clickable_words": ["James"]
+            "clickable_words": ["Elize"]
         },
         {
             "id": 4,
