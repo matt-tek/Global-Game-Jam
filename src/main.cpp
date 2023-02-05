@@ -14,12 +14,12 @@ int initDiary(game *gm)
     vector<sf::Text> t;
     vector<sf::RectangleShape> r;
     sf::RectangleShape rect;
-    vector<string> vec = split(str[0][0], " ");
-    vector<string> hidden = split(str[0][1], " ");
     int offset = 650;
     int y = 0;
 
     for (size_t j = 0; j < str.size(); j++) {
+        vector<string> vec = split(str[j][0], " ");
+        vector<string> hidden = split(str[j][1], " ");
         gm->diary.text.push_back(t);
         gm->diary.hide.push_back(r);
         for (size_t i = 0; i < vec.size(); i++) {
