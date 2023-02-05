@@ -19,20 +19,22 @@ int initDiary(game *gm)
     int offset = 650;
     int y = 0;
 
-    gm->diary.text.push_back(t);
-    gm->diary.hide.push_back(r);
-    for (size_t i = 0; i < vec.size(); i++) {
-        createText(&text, &gm->diary.font, "./assets/fonts/arial.ttf",
-            vec[i], 80, sf::Vector2f(offset, 440), sf::Color::White);
-        for (size_t y = 0; y < hidden.size(); y++) {
-            if (hidden[y].compare(vec[i]) == 0) {
-                rect = initRectangleShape(sf::Vector2f(offset, 440), sf::Color::Black, 2,
-                    sf::Color::White, sf::Vector2f(text.getLocalBounds().width, 100));
-                gm->diary.hide[0].push_back(rect);
+    for (size_t j = 0; j < str.size(); j++) {
+        gm->diary.text.push_back(t);
+        gm->diary.hide.push_back(r);
+        for (size_t i = 0; i < vec.size(); i++) {
+            createText(&text, &gm->diary.font, "./assets/fonts/arial.ttf",
+                vec[i], 80, sf::Vector2f(offset, 440), sf::Color::White);
+            for (size_t y = 0; y < hidden.size(); y++) {
+                if (hidden[y].compare(vec[i]) == 0) {
+                    rect = initRectangleShape(sf::Vector2f(offset, 440), sf::Color::Black, 2,
+                        sf::Color::White, sf::Vector2f(text.getLocalBounds().width, 100));
+                    gm->diary.hide[j].push_back(rect);
+                }
             }
+            gm->diary.text[j].push_back(text);
+            offset += text.getLocalBounds().width + 25.0f;
         }
-        gm->diary.text[0].push_back(text);
-        offset += text.getLocalBounds().width + 25.0f;
     }
     return 0;
 }
