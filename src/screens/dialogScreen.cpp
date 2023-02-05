@@ -48,10 +48,10 @@ int diaryScreen(game *gm)
     }
     gm->diary.check(gm->getWindow()->getWindow(), str[0], gm->currentDiary);
     gm->submitBut.drawButton(gm->getWindow()->getWindow());
-    gm->diary.copy = gm->submitBut.isMouseOnButton(sf::Vector2f((float)mouse.x, (float)mouse.y),
-        split(str[gm->currentDiary][1], " "), gm->diary.copy);
-    if (currentScreen == dialog_screen) {
-        cout << str.size() << endl;
+    gm->diary.copy = gm->submitBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y},
+        split(str[gm->currentDiary][1], " "), gm->diary.copy, &gm->correct);
+    if (currentScreen == dialog_screen && gm->correct == true) {
+        gm->correct = false;
         gm->diaryBut.isMouseClicked = 0;
         gm->currentDiary += 1;
         gm->diary.copy.clear();
@@ -99,7 +99,8 @@ string dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
     sf::Text t;
     sf::RectangleShape r;
     sf::FloatRect hitbox;
-
+    
+    gm->getWindow()->getWindow()->draw(gm->bg);;
     gm->displayCharacter(character);
     gm->getWindow()->getWindow()->draw(gm->dialogPannel);
     gm->diaryBut.drawButton(gm->getWindow()->getWindow());

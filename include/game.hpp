@@ -284,7 +284,7 @@ class submitButton : public button {
     }
 
     vector<sf::Text> isMouseOnButton(sf::Vector2f mousePos, vector<string> s,
-        vector<sf::Text> copy)
+        vector<sf::Text> copy, bool *c)
     {
         bool correct = true;
 
@@ -304,6 +304,7 @@ class submitButton : public button {
                 }
             }
             if (correct == true) {
+                *c = true;
                 currentScreen = dialog_screen;
                 isMouseClicked = false;
             } else
@@ -406,6 +407,7 @@ class game
         int y = 730;
         static game *instance;
 
+        bool correct = false;
         submitButton submitBut;
         goBackButton goBackBut;
         diaryButton diaryBut;
