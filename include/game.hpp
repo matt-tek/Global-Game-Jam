@@ -269,6 +269,8 @@ class game
         sf::RectangleShape dialogPannel;
         sf::Texture bgMenu;
         sf::Sprite bgMenuSprite;
+        std::vector<std::shared_ptr<sf::Texture>> perso_tex;
+        std::vector<std::shared_ptr<sf::Sprite>> person_spr;
         int currentScene = 0;
         int person = 0;
 

@@ -40,6 +40,9 @@ int menuScreen(game *gm)
     sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
 
     gm->getWindow()->getWindow()->draw(gm->bgMenuSprite);
+    for (auto &it: gm->person_spr) {
+        gm->getWindow()->getWindow()->draw(*it);
+    }
     gm->playBut.drawButton(gm->getWindow()->getWindow());
     
     if (gm->playBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
