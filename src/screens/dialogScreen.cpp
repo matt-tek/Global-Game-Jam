@@ -12,11 +12,9 @@ int diaryScreen(game *gm)
     sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
 
     gm->goBackBut.drawButton(gm->getWindow()->getWindow());
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        if (gm->goBackBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
-            gm->diaryBut.isMouseClicked = false;
-            gm->goBackBut.isMouseClicked = false;
-        }
+    if (gm->goBackBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
+        gm->diaryBut.isMouseClicked = false;
+        gm->goBackBut.isMouseClicked = false;
     }
     return 0;
 }
@@ -26,11 +24,9 @@ int treeScreen(game *gm)
     sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
 
     gm->goBackBut.drawButton(gm->getWindow()->getWindow());
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        if (gm->goBackBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
-            gm->goBackBut.isMouseClicked = false;
-            gm->treeBut.isMouseClicked = false;
-        }
+    if (gm->goBackBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
+        gm->goBackBut.isMouseClicked = false;
+        gm->treeBut.isMouseClicked = false;
     }
     return 0;
 }
@@ -62,10 +58,9 @@ string dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
     gm->diaryBut.drawButton(gm->getWindow()->getWindow());
     gm->treeBut.drawButton(gm->getWindow()->getWindow());
     mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        gm->diaryBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
-        gm->treeBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
-    }
+
+    gm->diaryBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
+    gm->treeBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y});
     if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == false)
         *clicked = false;
     for (size_t i = 0; i < gm->dialog.size(); i++) {
