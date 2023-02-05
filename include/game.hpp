@@ -8,17 +8,25 @@
 
 using namespace std;
 
+typedef enum screens_s {
+    main_menu,
+    dialog_screen,
+    diary_screen,
+    tree_screen
+} screens;
+
+extern screens currentScreen;
+
 class button {
     private:
     public:
     virtual void effect(void) = 0;
-
 };
 
-class diaryButton : public button {
+class goBackButton : public button {
     public:
-    void effect() override {
-        cout << "Hello\n";
+    void effect(void) override {
+        currentScreen = dialog_screen;
     }
 
     void initButtonRectangleShape(sf::Vector2f position,
@@ -47,15 +55,61 @@ class diaryButton : public button {
     int isMouseOnButton(sf::Vector2f mousePos)
     {
         if (hitBox.contains(mousePos) == true &&
-            sf::Mouse::isButtonPressed(sf::Mouse::Left) == true &&
-            isMouseClicked == true) {
-                return 0;
+            sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
+            isMouseClicked == false) {
             this->effect();
             isMouseClicked = true;
             return 1;
         }
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Left) == false)
-            isMouseClicked = false;
+        return 0;
+    }
+
+    bool isMouseClicked = false;
+    sf::FloatRect hitBox;
+    sf::Vector2f position;
+    sf::Font font;
+    sf::Text text;
+    sf::RectangleShape rect;
+};
+
+class diaryButton : public button {
+    public:
+    void effect(void) override {
+        currentScreen = diary_screen;
+    }
+
+    void initButtonRectangleShape(sf::Vector2f position,
+        sf::Color fillColor, float outlineThickness, sf::Color outlineColor,
+        sf::Vector2f size)
+    {
+        rect.setPosition(position);
+        rect.setFillColor(fillColor);
+        rect.setOutlineThickness(outlineThickness);
+        rect.setOutlineColor(outlineColor);
+        rect.setSize(size);
+
+        hitBox.width = size.x;
+        hitBox.height = size.y;
+        hitBox.top = position.y;
+        hitBox.left = position.x;
+        return;
+    }
+
+    void drawButton(sf::RenderWindow *window)
+    {
+        window->draw(rect);
+        window->draw(text);
+    }
+
+    int isMouseOnButton(sf::Vector2f mousePos)
+    {
+        if (hitBox.contains(mousePos) == true &&
+            sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == true &&
+            isMouseClicked == false) {
+            this->effect();
+            isMouseClicked = true;
+            return 1;
+        }
         return 0;
     }
 
@@ -70,7 +124,7 @@ class diaryButton : public button {
 class treeButton : public button {
     public:
     void effect () override {
-        cout << "Tree\n";
+        currentScreen = tree_screen;
     }
 
     void initButtonRectangleShape(sf::Vector2f position,
@@ -135,6 +189,7 @@ class game
     public:
         vector<string> collectedWords;
         static game *instance;
+        goBackButton goBackBut;
         diaryButton diaryBut;
         treeButton treeBut;
         map<std::string, int> playerId;
@@ -178,3 +233,4 @@ void setupDiaryButton(game **gm);
 void setupTreeButton(game **gm);
 void createText(sf::Text *text, sf::Font *font, string fontPath,
     string content, float charSize, sf::Vector2f position, sf::Color fillColor);
+void setupGoBackButton(game **gm);

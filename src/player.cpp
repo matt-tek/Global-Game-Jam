@@ -122,7 +122,7 @@ void player::talk(game **gm) {
     std::cout << this->parole[this->value]->parole << std::endl;
     this->parole[this->value]->validate = true;
     vec = split(this->parole[this->value]->parole.c_str(), " ");
-    (*gm)->font.loadFromFile("./assets/fonts/Dating.ttf");
+    (*gm)->font.loadFromFile("./assets/fonts/arial.ttf");
     (*gm)->dialog.clear();
     text.setFont((*gm)->font);
     for (size_t i = 0; i < vec.size(); i++) {

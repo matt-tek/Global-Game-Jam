@@ -63,3 +63,32 @@ James se réveille, il voit un portrait de lui et de sa soeur Catherine -> tuto 
 Donne à james son journal intime, avec tous les textes à trou à compléter pour avoir le fin mot de l'histoire
 il va parler à plusieurs memebre de sa famille ou revoir nombres de leurs souvenirs pour ainsi classer son affaire lui même.
 
+
+Dialogue :
+
+Intro:
+Already implemented
+
+skip a night
+
+Breakfast :
+
+Julia - Catherine - Agathe - James - Elize {
+	Ju : "Bien dormi les enfants ?".
+	Catherine : "au top"
+	James : "ça va"
+	Agathe : "pareil"
+	Catherine : "c'est vrai ça ?"
+	Agathe : "bah oui pourquoi ?"
+	Catherine : "j'entendais du bruit en direction de tes quartiers tard dans la nuit. Tu faisais quoi ?"
+	Agathe : "t'es sérieuse, tu devrais être aussi silencieuse que Elise si tu veux pas que je dévoile des choses."
+	Catherine : "Orhhh je plaisante juste."
+	Ju : "Est-ce une heure pour rentrer jeune fille ?"
+	ELize : "J'ai 20 ans Julia par pitié..."
+	Elize : "Où est Victor ?"
+	Julia : "Pourquoi ?"
+	Elize : "J'ai besoin d'argent."
+	Julia : "Pour commencer, pour toi c'est pas Victor mais papa et de deux il est en voyage d'affaire."
+	Elize : "Comme d'habitude j'ai envie de te dire..."
+	<La personne monte dans sa chambre>
+}
