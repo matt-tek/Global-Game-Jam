@@ -251,11 +251,21 @@ class clickWord {
     private:
 };
 
+class diaryScreenClass {
+    public:
+    vector<vector<sf::Text>> text;
+    vector<vector<sf::RectangleShape>> hide;
+    sf::Font font;
+    sf::RectangleShape wordPannel;
+};
+
 class game
 {
     private:
         windowClass win;
     public:
+        int currentDiary = 0;
+        diaryScreenClass diary;
         vector<string> collectedWords;
         static game *instance;
         goBackButton goBackBut;

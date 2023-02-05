@@ -44,7 +44,6 @@ player &game::getPlayer(std::string name) {
             return *it;
         }
     }
-    return *this->players[0];
 }
 
 void createSprite(sf::Sprite *sprite, sf::Texture *texture, std::string path,

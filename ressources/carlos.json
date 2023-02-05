@@ -2,15 +2,15 @@
     "text": [
         {
             "id": 1,
-            "text": "Hi I'm Carlos this is a test",
+            "text": "On fait comment pour ce qu'on à dit ? ",
             "dependsOn": [
                 
             ],
-            "clickable_words": ["Carlos", "is"]
+            "clickable_words": ["James"]
         },
         {
             "id": 2,
-            "text": "hey James",
+            "text": "Chaque chose en son temps par le tous puissant, suis mon dessin et tous se passera proprement",
             "dependsOn": [
                 
             ],

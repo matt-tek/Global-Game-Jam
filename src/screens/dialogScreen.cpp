@@ -15,6 +15,16 @@ int diaryScreen(game *gm)
     if (gm->goBackBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
         gm->diaryBut.isMouseClicked = false;
         gm->goBackBut.isMouseClicked = false;
+    gm->getWindow()->getWindow()->draw(gm->diary.wordPannel);
+    for (size_t i = 0; i < gm->diary.text[gm->currentDiary].size(); i++)
+        gm->getWindow()->getWindow()->draw(gm->diary.text[gm->currentDiary][i]);
+    for (size_t i = 0; i < gm->diary.hide[gm->currentDiary].size(); i++)
+        gm->getWindow()->getWindow()->draw(gm->diary.hide[gm->currentDiary][i]);
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+        if (gm->goBackBut.isMouseOnButton(sf::Vector2f((float)mouse.x, (float)mouse.y)) == 1) {
+            gm->diaryBut.isMouseClicked = false;
+            gm->goBackBut.isMouseClicked = false;
+        }
     }
     return 0;
 }

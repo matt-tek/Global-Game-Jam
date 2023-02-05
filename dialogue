@@ -16,6 +16,7 @@ James - Catherine {
 ;; Breakfast :
 
 Julia - Catherine - Agathe - James - Elize {
+    
     Ju : "Bien dormi les enfants ?". ~
     Catherine : "au top" ~
     James : "ça va" ~
@@ -40,12 +41,16 @@ carlos et victor aussi
 petit dialogue entre carlos et elize pour initier leurs relations
 Carlos, signe 
 
+toute la famille {
+    <Toute la famille est présente mais il y règne une ambiance pesante>
+    Elise:  
+}
+
 ;; james et diego se voient :
 
 james - diego {
     <James lis dans le journal que le gang de rojos manos, mode opératoire>
     <James passe devant elize, conversation suspecte avec Carlos>
-    <Pablo apprend tous ce que james à dit à Diego>
     James: "Comment ca va diego ? Toujours dans des affaires peu recommendables ?"
     Diego: "Ouais, toujours dans les affaires, mais tu sais commment c'est, ca se sera jamais assez pour papa"
     James: "Je sais, c'est pareil avec mon père, il est toujours en voyage d'affaire, il est jamais là pour nous."
@@ -54,6 +59,7 @@ james - diego {
     Diego: "T'as raison, allons voir des culs pour se changer les idées"
     James: "Tu sais bien que c'est pas légal, allons plûtot boire un verre"
     <James et Diego boivent un verre, James lui racontant les dingueries du journal ainsi que ses hypothèses sur Carlos>
+    <Pablo apprend tous ce que james à dit à Diego>
 }
 
 ;; Carlos et Sebastian se parlent pour tuer james
@@ -73,6 +79,7 @@ Elize, Carlos, Julia {
     <Elize et Sebastien discutent, Seb lui dit toute la vérité>
 
 }
+
 
 
 A faire - code {
