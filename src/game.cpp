@@ -12,7 +12,9 @@ game *game::getInstance() {
 
 game::game()
 {
-
+    this->bgMenu.loadFromFile("./assets/sprites/salon.jpg");
+    this->bgMenuSprite.setTexture(this->bgMenu);
+    this->bgMenuSprite.setScale((sf::Vector2f){2.5, 3});
 }
 
 game::~game()

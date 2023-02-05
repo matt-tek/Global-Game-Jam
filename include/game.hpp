@@ -267,6 +267,8 @@ class game
         vector<sf::Text> dialog;
         vector<clickWord> texts;
         sf::RectangleShape dialogPannel;
+        sf::Texture bgMenu;
+        sf::Sprite bgMenuSprite;
         int currentScene = 0;
         int person = 0;
 

@@ -21,3 +21,6 @@ target_link_libraries(json sfml-system sfml-window sfml-graphics sfml-network sf
 
 FILE(COPY ${PROJECT_SOURCE_DIR}/ressources DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
+FILE(COPY ${PROJECT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
+
+
