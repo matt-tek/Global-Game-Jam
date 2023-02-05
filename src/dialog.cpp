@@ -12,7 +12,7 @@ vector<string> introduction = {{"Catherine", "James", "Catherine", "James",
 
 vector<string> breakfast = {{"Julia", "Catherine", "James", "Agathe", "Catherine", "Agathe", "Catherine", "Agathe", "Catherine" ,"Julia", "Elize" ,"Elize", "Julia", "Elize", "Julia", "Elize"}};
 
-vector<string> diner = {{}};
+vector<string> diner = {{"Elize", "Julia", "Victor", "Elize", "Catherine", "Diego", "Agathe", "Carlos", "Pablo", "Victor"}};
 
 vector<string> cousin_meet = {{"James", "Diego", "James", "Diego", "James", "Diego", "James"}};
 

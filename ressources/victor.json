@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Hi I'm Victor this is a test",
+            "text": "C'est vrai, Elize. Je ne tolère pas ce genre de comportement !",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "text": "hey James",
+            "text": "Je suis d'accord avec toi, Pablo.",
             "dependsOn": [
                 
             ],

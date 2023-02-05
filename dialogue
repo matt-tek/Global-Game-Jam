@@ -43,7 +43,17 @@ Carlos, signe
 
 toute la famille {
     <Toute la famille est présente mais il y règne une ambiance pesante>
-    Elise:  
+    Elise:  "bon ca y est, il est mort, on va pas rester comme ca indéfiniement"
+    Julia: "ELIZE ! Un peu de respect pour ton frère !"
+    Victor: "C'est vrai, Elize. Je ne tolère pas ce genre de comportement !"
+    Elise: "Peut-être mais moi je ne tolère pas ta présence."
+    Catherine: "Ho calme toi grande soeur, on parle de notre grand frère quand même."
+    Diego: "Comment peux-tu être aussi insensible ??"
+    Agathe: "Si tu veux pas rester ici, personne ne te retiens."
+    <Elize part>
+    Carlos: "Je m'en occupe..."
+    Pablo: "Je propose qu'on lève tous notre verre à James. Puisse-t-il être heureux dans l'autre monde."
+    Victor: "Je suis d'accord avec toi, Pablo."
 }
 
 ;; james et diego se voient :

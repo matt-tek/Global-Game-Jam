@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "On fait comment pour ce qu'on à dit ? ",
+            "text": "Je m'en occupe...",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "text": "Chaque chose en son temps par le tous puissant, suis mon dessin et tous se passera proprement",
+            "text": "On fait comment pour ce qu'on à dit ? ",
             "dependsOn": [
                 
             ],
@@ -18,6 +18,14 @@
         },
         {
             "id": 3,
+            "text": "Chaque chose en son temps par le tous puissant, suis mon dessin et tous se passera proprement",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 4,
             "text": "Elle sera impliqué dans tous les cas, tu dois pour dire la vérité ",
             "dependsOn": [
                 

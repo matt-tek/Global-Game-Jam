@@ -21,6 +21,13 @@
             "dependsOn": [
             ],
             "clickable_words": ["James"]
+        },
+        {
+            "id": 4,
+            "text":  "Si tu veux pas rester ici, personne ne te retiens.",
+            "dependsOn": [
+            ],
+            "clickable_words": ["James"]
         }
     ]
 }
