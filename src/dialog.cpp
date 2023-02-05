@@ -18,6 +18,10 @@ vector<string> cousin_meet = {{"James", "Diego", "James", "Diego", "James", "Die
 
 vector<string> bad_meet = {{"Carlos", "Sebastian", "Carlos", "Sebastian", "Carlos"}};
 
+vector<string> bar_meet = {{"Sebastian", "Julia", "Sebastian", "Sebastian", "Elize", "Sebastian", "Elize", "Sebastian", "Elize", "Sebastian"}};
+
+vector<string> murder = {{"Elize", "James", "Elize"}};
+
 vector<vector<string>> history = {introduction, breakfast};
 
 string dialog(game **gm)
