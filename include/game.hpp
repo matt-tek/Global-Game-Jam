@@ -220,6 +220,10 @@ class submitButton : public button {
         bool correct = true;
 
 //        cout << copy.size() << "+" << s.size() << endl;
+        if (copy.size() > s.size()) {
+            copy.clear();
+            return copy;
+        }
         if (hitBox.contains(mousePos) == true &&
             sf::Mouse::isButtonPressed(sf::Mouse::Left) == true &&
             isMouseClicked == false && copy.size() == s.size()) {
@@ -230,9 +234,10 @@ class submitButton : public button {
                     break;
                 }
             }
-            if (correct == true)
+            if (correct == true) {
                 currentScreen = dialog_screen;
-            else
+                isMouseClicked = false;
+            } else
                 copy.clear();
             effect();
             isMouseClicked = true;
@@ -254,7 +259,8 @@ class submitButton : public button {
 class diaryScreenClass {
     public:
 
-    void check(sf::RenderWindow *window, std::vector<string> ansswer)
+    void check(sf::RenderWindow *window, std::vector<string> ansswer,
+        int currentDiary)
     {
         sf::Vector2i mouse = sf::Mouse::getPosition((*window));
         sf::Text t;
@@ -276,35 +282,34 @@ class diaryScreenClass {
         }
         if (selected == -1)
             return;
-        if (filled = 1) {
+        if (filled == 1) {
             for (size_t i = 0; i < copy.size(); i++)
                 window->draw(copy[i]);
         }
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) == false)
             up = 0;
-        for (size_t i = 0; i < hideHitbox[0].size(); i++) {
-            if (hideHitbox[0][i].contains(pos)) {
+        for (size_t i = 0; i < hideHitbox[currentDiary].size(); i++) {
+            if (hideHitbox[currentDiary][i].contains(pos)) {
                 if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) &&
                     up == 0) {
                     up = 1;
                     filled = 1;
                     createText(&t, &font, "./assets/fonts/arial.ttf",
                         wordTags[selected].getString(), 80,
-                        sf::Vector2f(hideHitbox[0][i].left,
-                        hideHitbox[0][i].top),
+                        sf::Vector2f(hideHitbox[currentDiary][i].left,
+                        hideHitbox[currentDiary][i].top),
                         sf::Color::White);
                     copy.push_back(t);
                     cout << "pushing_back_copy" << endl;
-                    hide[0][i].setOutlineThickness(0);
+                    hide[currentDiary][i].setOutlineThickness(0);
                 }
-                hide[0][i].setFillColor(sf::Color::White);
+                hide[currentDiary][i].setFillColor(sf::Color::White);
             } else {
-                hide[0][i].setFillColor(sf::Color::Black);
+                hide[currentDiary][i].setFillColor(sf::Color::Black);
             }
         }
         return;
     }
-
     int up = 0;
     vector<sf::Text> copy;
     int filled = 0;

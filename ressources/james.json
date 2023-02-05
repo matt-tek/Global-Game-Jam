@@ -18,11 +18,11 @@
         },
         {
             "id": 3,
-            "text": "Je vais plutôt aller me coucher ça ira, je suis pas sur qu'elle veuille voir ma tête",
+            "text": "C'est mort , Je vais plutôt aller me coucher ça ira, je suis pas sur qu'elle veuille voir ma tête",
             "dependsOn": [
                 
             ],
-            "clickable_words": ["James"]
+            "clickable_words": ["mort"]
         },
         {
             "id": 4,

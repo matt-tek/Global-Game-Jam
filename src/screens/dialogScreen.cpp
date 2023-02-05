@@ -36,9 +36,16 @@ int diaryScreen(game *gm)
             gm->goBackBut.isMouseClicked = false;
         }
     }
-    gm->diary.check(gm->getWindow()->getWindow(), str[0]);
+    gm->diary.check(gm->getWindow()->getWindow(), str[0], gm->currentDiary);
     gm->submitBut.drawButton(gm->getWindow()->getWindow());
-    gm->diary.copy = gm->submitBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}, split(str[0][1], " "), gm->diary.copy);
+    gm->diary.copy = gm->submitBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y},
+        split(str[gm->currentDiary][1], " "), gm->diary.copy);
+    if (currentScreen == dialog_screen) {
+        cout << str.size() << endl;
+        gm->diaryBut.isMouseClicked = 0;
+        gm->currentDiary += 1;
+        gm->diary.copy.clear();
+    }
     return 0;
 }
 
