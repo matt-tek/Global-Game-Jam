@@ -7,7 +7,7 @@ vector<string> split(const string& str, const string& delimiters);
 void setupSubmitButton(game **gm);
 
 vector<vector<string>> str = {{"My name is James 4 years old", "James 4"},
-    {"I'm dead", "dead"}};
+    {"Je suis mort", "mort"}};
 
 int initDiary(game *gm)
 {
@@ -17,10 +17,10 @@ int initDiary(game *gm)
     vector<sf::FloatRect> h;
     sf::RectangleShape rect;
     sf::FloatRect hitbox;
-    int offset = 650;
     int y = 0;
 
     for (size_t j = 0; j < str.size(); j++) {
+        int offset = 650;
         vector<string> vec = split(str[j][0], " ");
         vector<string> hidden = split(str[j][1], " ");
         gm->diary.text.push_back(t);
@@ -49,6 +49,7 @@ int initDiary(game *gm)
         sf::Color(0, 0, 0, 0), 4, sf::Color::White, sf::Vector2f(1910, 300));
     return 0;
 }
+
 screens currentScreen = screens::dialog_screen;
 
 int main(void)
