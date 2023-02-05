@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "text": "Chaque chose en son temps par le tout puissant, suis mon dessein et tous se passera proprement",
+            "text": "Chaque chose en son temps par le tout puissant, suis le plant élaboré et tout se passera proprement",
             "dependsOn": [
                 
             ],
@@ -31,6 +31,14 @@
                 
             ],
             "clickable_words": ["James"]
+        },
+        {
+            "id": 4,
+            "text": "Calme-toi, rappelle-toi qui a commandité son meurtre tout va bien se passer ",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["commandité"]
         },
         {
             "id": 5,

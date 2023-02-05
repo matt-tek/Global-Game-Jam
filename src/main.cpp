@@ -13,7 +13,13 @@ void setupSubmitButton(game **gm);
 
 vector<vector<string>> str = {{"Je m'appelle James", "James"},
     {"Elize ne s'entend pas avec Victor", "Elize Victor"},
-    {"Je suis mort", "mort"}};
+    {"Je suis mort", "mort"},
+    {"Comme moi , Diego adore son papa", "moi Diego papa"},
+    {"Elize est en réalité l' enfant de Julia et Sebastian", "Elize enfant Julia Sebastian"},
+    {"", ""},
+    {"Elize est venue me tuer", "Elize me tuer"},
+    {"Pablo à commandité mon meurtre, Carlos à élaboré le plan et Sebastian à manipulé Elize et l'a incitée à me tuer",
+        "Pablo commandité mon meurtre Carlos élaboré Sebastian Elize tuer"}};
 
 int initDiary(game *gm)
 {
@@ -27,7 +33,7 @@ int initDiary(game *gm)
     setlocale(LC_ALL, "");
 
     for (size_t j = 0; j < str.size(); j++) {
-        int offset = 650;
+        int offset = 20;
         vector<string> vec = split(str[j][0], " ");
         vector<string> hidden = split(str[j][1], " ");
         gm->diary.text.push_back(t);
