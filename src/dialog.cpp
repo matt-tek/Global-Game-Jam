@@ -22,6 +22,8 @@ vector<string> bar_meet = {{"Sebastian", "Julia", "Sebastian", "Sebastian", "Eli
 
 vector<string> murder = {{"Elize", "James", "Elize"}};
 
+vector <string> bonus = {{"Pablo", "Carlos", "Pablo", "Carlos", "Pablo", "Carlos", "Pablo", "Carlos"}};
+
 vector<vector<string>> history = {introduction, breakfast};
 
 string dialog(game **gm)
