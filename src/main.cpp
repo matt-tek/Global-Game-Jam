@@ -85,7 +85,6 @@ int main(void)
 
     while (gm->getWindow()->getWindow()->isOpen()) {
         gm->getWindow()->getWindow()->clear();
-        gm->getWindow()->getWindow()->draw(gm->bg);
         while (gm->getWindow()->getWindow()->pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 gm->getWindow()->getWindow()->close();
