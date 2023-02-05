@@ -36,6 +36,8 @@ int initDiary(game *gm)
             offset += text.getLocalBounds().width + 25.0f;
         }
     }
+    gm->diary.wordPannel = initRectangleShape((sf::Vector2f){4, 707},
+        sf::Color(0, 0, 0, 0), 4, sf::Color::White, (sf::Vector2f){1910, 300});
     return 0;
 }
 screens currentScreen = screens::dialog_screen;

@@ -187,6 +187,7 @@ class diaryScreenClass {
     vector<vector<sf::Text>> text;
     vector<vector<sf::RectangleShape>> hide;
     sf::Font font;
+    sf::RectangleShape wordPannel;
 };
 
 class game
