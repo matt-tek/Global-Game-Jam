@@ -117,6 +117,10 @@ string dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
             //gm->getWindow()->getWindow()->draw(gm->texts[i].rect);
             if (gm->texts[i].hitbox.contains(sf::Vector2f(mouse.x, mouse.y)) == true &&
                 gm->texts[i].collected == false) {
+                if (gm->offset > 1700) {
+                    gm->offset = 40;
+                    gm->y += 150;
+                }
                 gm->collectedWords.push_back(gm->texts[i].str);
                 for (size_t y = 0; y < gm->collectedWords.size(); y++)
                     cout << "[" << gm->collectedWords[y] << "], ";

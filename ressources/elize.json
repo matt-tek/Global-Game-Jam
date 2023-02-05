@@ -6,7 +6,7 @@
             "dependsOn": [
                 
             ],
-            "clickable_words": ["Elize"]
+            "clickable_words": ["Julia"]
         },
         {
             "id": 2,
@@ -46,7 +46,7 @@
             "dependsOn": [
                 
             ],
-            "clickable_words": ["Julia"]
+            "clickable_words": ["moi"]
         },
         {
             "id": 7,
@@ -86,7 +86,7 @@
             "dependsOn": [
                 
             ],
-            "clickable_words": ["Julia"]
+            "clickable_words": ["me"]
         },
         {
             "id": 12,

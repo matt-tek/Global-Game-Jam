@@ -10,11 +10,19 @@
         },
         {
             "id": 2,
-            "text": "Je suis d'accord avec toi, Pablo.",
+            "text": "Merci Carlos .",
             "dependsOn": [
                 
             ],
-            "clickable_words": ["James"]
+            "clickable_words": ["Carlos"]
+        },
+        {
+            "id": 3,
+            "text": "Je suis d'accord avec toi, Pablo",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Pablo"]
         }
     ]
 }

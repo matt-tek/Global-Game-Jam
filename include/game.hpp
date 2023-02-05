@@ -384,6 +384,7 @@ class diaryScreenClass {
     vector<sf::Text> copy;
     int filled = 0;
     int selected = -1;
+    int y = 95;
     vector<vector<sf::Text>> text;
     vector<vector<sf::RectangleShape>> hide;
     vector<vector<sf::FloatRect>> hideHitbox;

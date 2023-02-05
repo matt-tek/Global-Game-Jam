@@ -10,11 +10,11 @@
         },
         {
             "id": 2,
-            "text": "On fait comment pour ce qu'on à dit ? ",
+            "text": "Bon Sebastian , on fait comment pour ce qu'on à dit ? ",
             "dependsOn": [
                 
             ],
-            "clickable_words": ["James"]
+            "clickable_words": ["Sebastian"]
         },
         {
             "id": 3,

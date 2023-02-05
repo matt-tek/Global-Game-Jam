@@ -14,15 +14,15 @@
             "dependsOn": [
                 
             ],
-            "clickable_words": ["affaires"]
+            "clickable_words": ["papa"]
         },
         {
             "id": 3,
-            "text": "Ouais mais va y, j'ai l'impression qu'il nous font pas confiance.",
+            "text": "Ouais mais vas-y, j'ai l'impression qu'il nous font pas confiance.",
             "dependsOn": [
                 
             ],
-            "clickable_words": ["James"]
+            "clickable_words": ["moi"]
         },
         {
             "id": 4,
