@@ -25,7 +25,7 @@ vector<string> murder = {{"Elize", "James", "Elize"}};
 vector <string> bonus = {{"Pablo", "Carlos", "Pablo", "Carlos", "Pablo", "Carlos", "Pablo", "Carlos"}};
 
 vector<string> bgs = {"./assets/sprites/salon.jpg",
-    "./assets/sprites/kwizine.png", "./assets/sprites/kwizine.png",
+    "./assets/sprites/kwizine.png", "./assets/sprites/dining_2.jpg",
     "./assets/sprites/garden.jpg", "./assets/sprites/billiard.jpg",
     "./assets/sprites/night_club.jpg", "./assets/sprites/room.jpg"};
 
