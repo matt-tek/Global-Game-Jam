@@ -133,9 +133,9 @@ void player::talk(game **gm) {
         text.setCharacterSize(50);
         text.setString(vec[i]);
         isWordClickable(gm, &text, this->clickableWords[this->value], vec[i], offset, y);
-        text.setPosition((sf::Vector2f){offset, y});
+        text.setPosition(sf::Vector2f(offset, y));
         if (isSingleChar(vec[i])) {
-            text.setPosition((sf::Vector2f){offset - 15.0f, y});
+            text.setPosition(sf::Vector2f(offset - 15.0f, y));
             offset += 10.0f;
         } else
             offset += text.getLocalBounds().width + 20.0f;
