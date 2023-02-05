@@ -11,6 +11,10 @@ include(FetchContent)
 
 set(SFML_VERSION 2.5.1)
 
+set(FETCHCONTENT_QUIET OFF)
+
+set(BUILD_SHARED_LIBS TRUE)
+
 FetchContent_Declare(
     sfml
     GIT_REPOSITORY "https://github.com/SFML/SFML.git"
