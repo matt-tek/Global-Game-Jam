@@ -10,6 +10,12 @@
 extern vector<vector<string>> str;
 vector<string> split(const string& str, const string& delimiters);
 
+extern vector<string> bgs;
+
+    /* gm->texture.loadFromFile("./assets/sprites/salon.jpg");
+    gm->bg.setTexture(gm->texture);
+    gm->bg.setScale(sf::Vector2f(1.71, 1.71)); */
+
 int diaryScreen(game *gm)
 {
     sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
@@ -49,6 +55,10 @@ int diaryScreen(game *gm)
         gm->diaryBut.isMouseClicked = 0;
         gm->currentDiary += 1;
         gm->diary.copy.clear();
+
+        gm->texture.loadFromFile("./assets/sprites/salon.jpg");
+        gm->bg.setTexture(gm->texture);
+        gm->bg.setScale(sf::Vector2f(1.71, 1.71));
     }
     return 0;
 }

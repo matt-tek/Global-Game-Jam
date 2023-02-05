@@ -18,7 +18,7 @@
         },
         {
             "id": 3,
-            "text": "Merci de l'avoir ammené julia, j'avais vraiment envie de la voir",
+            "text": "Merci de l'avoir ammené julia, j'avais vraiment envie d'au moins la voir de loin",
             "dependsOn": [
                 
             ],
@@ -34,7 +34,7 @@
         },
         {
             "id": 5,
-            "text": "Elise, comment vas-tu ?",
+            "text": "Elize, comment vas-tu ?",
             "dependsOn": [
                 
             ],
@@ -50,7 +50,7 @@
         },
         {
             "id": 7,
-            "text": "J'ai eue une liaison avec ta mère il y a 20 ans, c'est de cette liaison que tu es née. Victor n'est pas ton père",
+            "text": "J'ai eu une liaison avec ta mère il y a 20 ans, c'est de cette liaison que tu es née. Victor n'est pas ton père",
             "dependsOn": [
                 
             ],
@@ -58,7 +58,7 @@
         },
         {
             "id": 8,
-            "text": "Que tu n'es pas d'affinité avec Victor, oui, j'ai une proposition à te faire.",
+            "text": "Que tu n'aie pas d'affinités avec Victor, oui, mais tu peux tout arranger.",
             "dependsOn": [
                 
             ],

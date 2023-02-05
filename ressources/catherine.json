@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "text": "C'est pas parce que t'as 4 ans de plus que moi que tu dois faire le malin, puis t'as qu'a le dire à ta soeur",
+            "text": "T'as à peine 4 ans de plus que moi fais pas le malin, puis t'as qu'a le dire à ta soeur",
             "dependsOn": [
                 
             ],
@@ -43,7 +43,7 @@
         },
         {
             "id": 6,
-            "text": "j'entendais du bruit en direction de tes quartiers tard dans la nuit. Tu faisais quoi ? ",
+            "text": "j'ai entendu du bruit en direction de tes quartiers tard dans la nuit. Tu faisais quoi ? ",
             "dependsOn": [],
             "clickable_words": ["tard"]
         },
@@ -55,7 +55,7 @@
         },
         {
             "id": 8,
-            "text": "Ho calme toi grande soeur, on parle de notre grand frère quand même.",
+            "text": "Oh calme toi, on parle de notre grand frère quand même.",
             "dependsOn": [],
             "clickable_words": ["James"]
         }
