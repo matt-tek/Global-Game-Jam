@@ -16,6 +16,7 @@ James - Catherine {
 ;; Breakfast :
 
 Julia - Catherine - Agathe - James - Elize {
+    
     Ju : "Bien dormi les enfants ?". ~
     Catherine : "au top" ~
     James : "ça va" ~
@@ -40,12 +41,26 @@ carlos et victor aussi
 petit dialogue entre carlos et elize pour initier leurs relations
 Carlos, signe 
 
+toute la famille {
+    <Toute la famille est présente mais il y règne une ambiance pesante>
+    Elise:  "bon ca y est, il est mort, on va pas rester comme ca indéfiniement"
+    Julia: "ELIZE ! Un peu de respect pour ton frère !"
+    Victor: "C'est vrai, Elize. Je ne tolère pas ce genre de comportement !"
+    Elise: "Peut-être mais moi je ne tolère pas ta présence."
+    Catherine: "Ho calme toi grande soeur, on parle de notre grand frère quand même."
+    Diego: "Comment peux-tu être aussi insensible ??"
+    Agathe: "Si tu veux pas rester ici, personne ne te retiens."
+    <Elize part>
+    Carlos: "Je m'en occupe..."
+    Pablo: "Je propose qu'on lève tous notre verre à James. Puisse-t-il être heureux dans l'autre monde."
+    Victor: "Je suis d'accord avec toi, Pablo."
+}
+
 ;; james et diego se voient :
 
 james - diego {
     <James lis dans le journal que le gang de rojos manos, mode opératoire>
     <James passe devant elize, conversation suspecte avec Carlos>
-    <Pablo apprend tous ce que james à dit à Diego>
     James: "Comment ca va diego ? Toujours dans des affaires peu recommendables ?"
     Diego: "Ouais, toujours dans les affaires, mais tu sais commment c'est, ca se sera jamais assez pour papa"
     James: "Je sais, c'est pareil avec mon père, il est toujours en voyage d'affaire, il est jamais là pour nous."
@@ -54,6 +69,7 @@ james - diego {
     Diego: "T'as raison, allons voir des culs pour se changer les idées"
     James: "Tu sais bien que c'est pas légal, allons plûtot boire un verre"
     <James et Diego boivent un verre, James lui racontant les dingueries du journal ainsi que ses hypothèses sur Carlos>
+    <Pablo apprend tous ce que james à dit à Diego>
 }
 
 ;; Carlos et Sebastian se parlent pour tuer james
@@ -62,20 +78,45 @@ Carlos, Sebastian {
     Seb: "Je te l'ai dit, je veux me débarasser de Victor, sa femme n'assouvie guerre mes désirs de conquête."
     Carlos: "Chaque chose en son temps par le tous puissant, suis mon dessin et tous se passera proprement"
     Seb: "D'accord, mais on ne touche pas à un cheveux de ma fille"
+    Carlos: "Elle sera impliqué dans tous les cas, tu dois pour dire la vérité "
     <Carlos et seb se serrent la mains et repartent chacun de leurs cotés>
 }
 
 ;; Carlos emmène Elize et julia dans l'un des bar de sebastien
 ;; OU ALORS 
 ;; Juste Julia et Eliza -> Sebastian arrive et prend Eliza à part
-Elize, Carlos, Julia {
-    <Didascalie qui suggèrent que 
-    <Elize et Sebastien discutent, Seb lui dit toute la vérité>
-
+Elize, Sebastian, Julia {
+    Sebastian: "Merci de l'avoir ammené julia, j'avais vraiment envie de la voir"
+    julia: "C'est normal, mais tu sais très bien que tu ne peux pas la voir, je ne veux pas perdre ma famille"
+    Sebastian: "Tu peux me faire confiance..."
+    <Julia part se repoudrer le nez au toilette, Sebastian en profite>
+    Sebastian: "Elise, comment vas-tu ?"
+    Elise: "Bonsoir, qui êtes vous ?"
+    Sebastian: "Je m'appelle Sebastian, je suis ton père"
+    Elise: "Hm...expliquez vous"
+    Sebastian: "J'ai eue une liaison avec ta mère il y a 20 ans, c'est de cette liaison que tu es née. Victor n'est pas ton père"
+    Elise: "Ca expliquerai beaucoup de chose..."
+    Sebastian: "Que tu n'es pas d'affinité avec victor, oui, j'ai une proposition à te faire."
+    <Julia sorti des toilettes et Sebastian s'eloigna, laissant son numéro à Elise>
 }
 
-
-A faire - code {
-    arbre
-    journal -> commencé par lenny
+;; Elise tue james
+Elize - James {
+    Elize: "James...Je suis désolée mais je dois me débarasser de toi"
+    James: "Pourquoi ? Tous n'est pas rose dans la famille mais on peut arranger les choses"
+    Elize: "Non, je veux ma vraie famille, je veux être heureuse"
+    <Coup de slash>
+    <The END>
 }
+
+Carlos - Pablo {
+    Pablo: "Notre bon à rien de neuveu va nous mettre dans la merde carlos ! "
+    Carlos: "Comment ca ? il ne sait rien faire d'autre que lire et etudier"
+    Pablo: "Il a déduit que les derniers meutres étaient lier à la famille, il va nous trahir"
+    Carlos: "Qu'es ce que j'en ai à foutre ? "
+    Pablo: "C'est toi qu'il va dénoncer en premier abruti ! Je te propose donc un marché"
+    Carlos: "Quel marché ?"
+    Pablo: "Démerde toi pour tuer James, et je paye tes dettes"
+    Carlos: "D'accord, j'ai un plan..."
+}
+;; game event : un mot à récupérer dans les didascalies ou l'arbrte une fois complété pour accéder au dialogue ou on sait que pablo est le commanditeur

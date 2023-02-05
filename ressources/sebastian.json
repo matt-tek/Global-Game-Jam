@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Hi I'm Sebastian this is a test",
+            "text": "Je te l'ai dit, je veux me débarasser de Victor, sa femme n'assouvie guerre mes désirs de conquête.",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,55 @@
         },
         {
             "id": 2,
-            "text": "hey James",
+            "text": "D'accord, mais on ne touche pas à un cheveux de ma fille",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 3,
+            "text": "Merci de l'avoir ammené julia, j'avais vraiment envie de la voir",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 4,
+            "text": "Tu peux me faire confiance...",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 5,
+            "text": "Elise, comment vas-tu ?",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 6,
+            "text": "Je m'appelle Sebastian, je suis ton père",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 7,
+            "text": "J'ai eue une liaison avec ta mère il y a 20 ans, c'est de cette liaison que tu es née. Victor n'est pas ton père",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 8,
+            "text": "Que tu n'es pas d'affinité avec Victor, oui, j'ai une proposition à te faire.",
             "dependsOn": [
                 
             ],

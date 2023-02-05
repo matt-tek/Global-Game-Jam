@@ -65,6 +65,12 @@
             "file": "./ressources/victor.json",
             "sprite": "./assets/sprites/Victor_1.png",
             "profile_picture": "./assets/sprites/VictorHead.png"
+        },
+        {
+            "name": "Diego",
+            "file": "./ressources/diego.json",
+            "sprite": "./assets/sprites/Diego_1.png",
+            "profile_picture": "./assets/sprites/DiegoHead.png"
         }
     ]
 }

@@ -2,11 +2,11 @@
     "text": [
         {
             "id": 1,
-            "text": "T'es rentré toi ? je pensais que t'allais dormir à la soirée vu l'heure qu'il est .",
+            "text": "Ah tiens James ! T'es rentré toi ? je pensais que t'allais dormir à la soirée vu l'heure qu'il est .",
             "dependsOn": [
                 
             ],
-            "clickable_words": ["tard", "is"]
+            "clickable_words": ["James"]
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "dependsOn": [
                 
             ],
-            "clickable_words": ["James"]
+            "clickable_words": ["4"]
         },
         {
             "id": 3,
@@ -50,6 +50,12 @@
         {
             "id": 7,
             "text": "Orhhh je plaisante juste.",
+            "dependsOn": [],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 8,
+            "text": "Ho calme toi grande soeur, on parle de notre grand frère quand même.",
             "dependsOn": [],
             "clickable_words": ["James"]
         }
