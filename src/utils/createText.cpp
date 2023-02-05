@@ -14,7 +14,7 @@ void createText(sf::Text *text, sf::Font *font, string fontPath,
     text->setFont((*font));
     text->setFillColor(fillColor);
     text->setCharacterSize(charSize);
-    text->setString(content);
+    text->setString(s2ws(content));
     text->setPosition(position);
     return;
 }

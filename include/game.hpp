@@ -8,6 +8,8 @@
 
 using namespace std;
 
+std::wstring s2ws(std::string &str);
+
 void createText(sf::Text *text, sf::Font *font, string fontPath,
     string content, float charSize, sf::Vector2f position, sf::Color fillColor);
 
@@ -384,7 +386,6 @@ class diaryScreenClass {
     vector<sf::Text> copy;
     int filled = 0;
     int selected = -1;
-    int y = 95;
     vector<vector<sf::Text>> text;
     vector<vector<sf::RectangleShape>> hide;
     vector<vector<sf::FloatRect>> hideHitbox;

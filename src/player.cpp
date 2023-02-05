@@ -131,7 +131,7 @@ void player::talk(game **gm) {
             y += 80;
         }
         text.setCharacterSize(50);
-        text.setString(vec[i]);
+        text.setString(s2ws(vec[i]));
         isWordClickable(gm, &text, this->clickableWords[this->value], vec[i], offset, y);
         text.setPosition(sf::Vector2f(offset, y));
         if (isSingleChar(vec[i])) {
