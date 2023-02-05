@@ -3,6 +3,20 @@
 
 game *game::instance = nullptr;
 
+int load(std::string path, std::vector<std::shared_ptr<sf::Sprite>> &spr, std::vector<std::shared_ptr<sf::Texture>> &tex, sf::Vector2f pos)
+{
+    std::shared_ptr<sf::Texture> texture = std::make_shared<sf::Texture>();
+    std::shared_ptr<sf::Sprite> sprite = std::make_shared<sf::Sprite>();
+    if (!texture->loadFromFile(path))
+        return 84;
+    sprite->setTexture(*texture);
+    sprite->setPosition(pos);
+    tex.push_back(texture);
+    spr.push_back(sprite);
+
+    return 0;
+}
+
 game *game::getInstance() {
     if (instance == nullptr) {
         instance = new game();
@@ -12,7 +26,11 @@ game *game::getInstance() {
 
 game::game()
 {
-
+    this->bgMenu.loadFromFile("./assets/sprites/salon.jpg");
+    this->bgMenuSprite.setTexture(this->bgMenu);
+    this->bgMenuSprite.setScale((sf::Vector2f){2.5, 3});
+    load("./assets/sprites/Julia_1.png", this->person_spr, this->perso_tex, sf::Vector2f(0, 130));
+    load("./assets/sprites/Victor_1.png", this->person_spr, this->perso_tex, sf::Vector2f(1000, 130));
 }
 
 game::~game()
@@ -26,7 +44,6 @@ player &game::getPlayer(std::string name) {
             return *it;
         }
     }
-    return *this->players[0];
 }
 
 void createSprite(sf::Sprite *sprite, sf::Texture *texture, std::string path,

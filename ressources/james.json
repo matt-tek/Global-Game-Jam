@@ -1,0 +1,76 @@
+{
+    "text": [
+        {
+            "id": 1,
+            "text": "Non non, honnêtement je me sentais pas à l'aise là bas donc j'ai préféré partir. Toi par contre tu devrais être au lit.",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 2,
+            "text": "Mais ... c'est ce que je fais là. Tu viens à peine d'être majeur joue pas la grande.",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 3,
+            "text": "C'est mort , Je vais plutôt aller me coucher ça ira, je suis pas sur qu'elle veuille voir ma tête",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["mort"]
+        },
+        {
+            "id": 4,
+            "text": "ca va ",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 5,
+            "text": "Comment ca va Diego ? Toujours dans des affaires peu recommendables ?",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Diego"]
+        },
+        {
+            "id": 6,
+            "text": "Je sais, c'est pareil avec mon père, il est toujours en voyage d'affaire, il est jamais là pour nous.",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Diego"]
+        },
+        {
+            "id": 7,
+            "text": "Je sais pas, n'y pensons pas écoute",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Diego"]
+        },
+        {
+            "id": 8,
+            "text": "Tu sais bien que c'est pas légal, allons plûtot boire un verre...",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Diego"]
+        },
+        {
+            "id": 9,
+            "text": "Pourquoi ? Tous n'est pas rose dans la famille mais on peut arranger les choses",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Diego"]
+        }
+    ]
+}

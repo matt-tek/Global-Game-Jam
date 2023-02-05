@@ -2,17 +2,30 @@
     "text": [
         {
             "id": 1,
-            "text": "Hi I'm Agathe this is a test",
+            "text": "Pareil",
             "dependsOn": [
                 
             ],
-            "clickable_words": ["Agathe"]
+            "clickable_words": ["James"]
         },
         {
             "id": 2,
-            "text": "hey James",
+            "text": "bah oui pourquoi ? ",
             "dependsOn": [
-                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 3,
+            "text":  "t'es sérieuse, tu devrais être aussi silencieuse que Elise si tu veux pas que je dévoile des choses.",
+            "dependsOn": [
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 4,
+            "text":  "Si tu veux pas rester ici, personne ne te retiens.",
+            "dependsOn": [
             ],
             "clickable_words": ["James"]
         }

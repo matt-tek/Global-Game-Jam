@@ -48,9 +48,8 @@ bool player::loadjson(std::string file) {
     Json::Value root;
     std::vector<std::string> words;
 
-    if (!reader.parse(ifs, root)) {
+    if (!reader.parse(ifs, root))
         return false;
-    }
     this->clickableWords.push_back(words);
     std::cout << "Loading player " << this->name << std::endl;
     Json::Value tex = root["text"];
@@ -79,14 +78,29 @@ bool player::loadjson(std::string file) {
     return true;
 }
 
-int isWordClickable(sf::Text *text, std::vector<string> words, string str)
+int isWordClickable(game **gm, sf::Text *text, std::vector<string> words, string str,
+    int x, int y)
 {
+    clickWord click;
+
     for (size_t i = 0; i < words.size(); i++) {
         if (words[i].compare(str) == 0) {
             text->setFillColor(sf::Color::Green);
+            click.isClickable = true;
+            click.rect = initRectangleShape(sf::Vector2f(x, y), sf::Color(0, 0, 0, 0),
+                2, sf::Color::White, sf::Vector2f(text->getLocalBounds().width, 70));
+            click.hitbox.left = x;
+            click.hitbox.top = y;
+            click.hitbox.width = text->getLocalBounds().width;
+            click.hitbox.height = text->getLocalBounds().height;
+            click.collected = false;
+            click.str = text->getString();
+            (*gm)->texts.push_back(click);
             return 1;
         }
     }
+    click.isClickable = false;
+    (*gm)->texts.push_back(click);
     text->setFillColor(sf::Color::White);
     return 0;
 }
@@ -112,22 +126,21 @@ void player::talk(game **gm) {
     (*gm)->dialog.clear();
     text.setFont((*gm)->font);
     for (size_t i = 0; i < vec.size(); i++) {
-        if (offset >= 1800) {
+        if (offset >= 1700) {
             offset = 350;
             y += 80;
         }
         text.setCharacterSize(50);
         text.setString(vec[i]);
-        isWordClickable(&text, this->clickableWords[this->value], vec[i]);
-        text.setPosition((sf::Vector2f){offset, y});
+        isWordClickable(gm, &text, this->clickableWords[this->value], vec[i], offset, y);
+        text.setPosition(sf::Vector2f(offset, y));
         if (isSingleChar(vec[i])) {
-            text.setPosition((sf::Vector2f){offset - 15.0f, y});
+            text.setPosition(sf::Vector2f(offset - 15.0f, y));
             offset += 10.0f;
         } else
             offset += text.getLocalBounds().width + 20.0f;
         (*gm)->dialog.push_back(text);
     }
-
     if (this->parole[value]->isNext() && this->parole.size() != this->value) {
         this->value += 1;
     }
