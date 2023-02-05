@@ -35,6 +35,20 @@ int treeScreen(game *gm)
     return 0;
 }
 
+int menuScreen(game *gm)
+{
+    sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
+
+    gm->playBut.drawButton(gm->getWindow()->getWindow());
+    
+    if (gm->playBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
+        gm->playBut.isMouseClicked = false;
+        currentScreen = screens::dialog_screen;
+        return 1;
+    }
+    return (0);
+}
+
 string dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
 {
     sf::Vector2i mouse;

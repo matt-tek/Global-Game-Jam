@@ -3,7 +3,9 @@
 string dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
 int diaryScreen(game *gm);
 int treeScreen(game *gm);
-screens currentScreen = screens::dialog_screen;
+int menuScreen(game *gm);
+void setupPlayButton(game **gm);
+screens currentScreen = screens::main_menu;
 
 int main(void)
 {
@@ -21,6 +23,7 @@ int main(void)
     setupDiaryButton(&gm);
     setupTreeButton(&gm);
     setupGoBackButton(&gm);
+    setupPlayButton(&gm);
 
     gm->dialogPannel = initRectangleShape((sf::Vector2f){4, 707},
         sf::Color(0, 0, 0, 0), 4, sf::Color::White, (sf::Vector2f){1910, 300});
@@ -37,6 +40,8 @@ int main(void)
             diaryScreen(gm);
         else if (currentScreen == screens::tree_screen)
             treeScreen(gm);
+        else if (currentScreen == screens::main_menu)
+            menuScreen(gm);
         gm->getWindow()->getWindow()->display();
     }
     return (0);
