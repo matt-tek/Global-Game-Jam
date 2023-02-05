@@ -7,12 +7,25 @@
 
 #include "game.hpp"
 
+extern vector<vector<string>> str;
+vector<string> split(const string& str, const string& delimiters);
+
 int diaryScreen(game *gm)
 {
     sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
+    sf::Vector2f pos;
+    int offset = 50;
+
+    /* gm->diary.wordTags[0].setPosition((sf::Vector2f){(float)mouse.x,
+        (float)mouse.y}); */
 
     gm->goBackBut.drawButton(gm->getWindow()->getWindow());
     gm->getWindow()->getWindow()->draw(gm->diary.wordPannel);
+    for (size_t i = 0; i < gm->diary.wordTags.size(); i++) {
+        pos = gm->diary.wordTags[i].getPosition();
+        gm->getWindow()->getWindow()->draw(gm->diary.wordTagsRect[i]);
+        gm->getWindow()->getWindow()->draw(gm->diary.wordTags[i]);
+    }
     for (size_t i = 0; i < gm->diary.text[gm->currentDiary].size(); i++)
         gm->getWindow()->getWindow()->draw(gm->diary.text[gm->currentDiary][i]);
     for (size_t i = 0; i < gm->diary.hide[gm->currentDiary].size(); i++)
@@ -23,6 +36,9 @@ int diaryScreen(game *gm)
             gm->goBackBut.isMouseClicked = false;
         }
     }
+    gm->diary.check(gm->getWindow()->getWindow(), str[0]);
+    gm->submitBut.drawButton(gm->getWindow()->getWindow());
+    gm->diary.copy = gm->submitBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}, split(str[0][1], " "), gm->diary.copy);
     return 0;
 }
 
@@ -43,6 +59,9 @@ int treeScreen(game *gm)
 string dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
 {
     sf::Vector2i mouse;
+    sf::Text t;
+    sf::RectangleShape r;
+    sf::FloatRect hitbox;
 
     gm->displayCharacter(character);
     gm->getWindow()->getWindow()->draw(gm->dialogPannel);
@@ -67,6 +86,19 @@ string dialogScreen(game *gm, string character, int *isPressed, bool *clicked)
                     cout << "[" << gm->collectedWords[y] << "], ";
                 cout << endl;
                 gm->texts[i].collected = true;
+                createText(&t, &gm->diary.font, "./assets/fonts/arial.ttf",
+                    gm->collectedWords[gm->collectedWords.size() - 1], 80, sf::Vector2f(gm->offset, gm->y),
+                    sf::Color::White);
+                r = initRectangleShape(sf::Vector2f(gm->offset - 5.0f, gm->y), sf::Color(0, 0, 0, 0),
+                    3, sf::Color::White, sf::Vector2f(t.getGlobalBounds().width + 10.0f, 105));
+                gm->diary.wordTagsRect.push_back(r);
+                gm->diary.wordTags.push_back(t);
+                hitbox.height = 105;
+                hitbox.width = t.getLocalBounds().width + 10.0f;
+                hitbox.top = gm->y;
+                hitbox.left = gm->offset - 5.0f;
+                gm->offset += t.getLocalBounds().width + 30.0f;
+                gm->diary.wordsTagsHitbox.push_back(hitbox);
                 cout << "Clicked a word" << endl;
                 break;
             }

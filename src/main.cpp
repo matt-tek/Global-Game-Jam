@@ -4,8 +4,9 @@ string dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
 int diaryScreen(game *gm);
 int treeScreen(game *gm);
 vector<string> split(const string& str, const string& delimiters);
+void setupSubmitButton(game **gm);
 
-vector<vector<string>> str = {{"My name is James", "James"},
+vector<vector<string>> str = {{"My name is James 4 years old", "James 4"},
     {"I'm dead", "dead"}};
 
 int initDiary(game *gm)
@@ -13,7 +14,9 @@ int initDiary(game *gm)
     sf::Text text;
     vector<sf::Text> t;
     vector<sf::RectangleShape> r;
+    vector<sf::FloatRect> h;
     sf::RectangleShape rect;
+    sf::FloatRect hitbox;
     int offset = 650;
     int y = 0;
 
@@ -22,6 +25,7 @@ int initDiary(game *gm)
         vector<string> hidden = split(str[j][1], " ");
         gm->diary.text.push_back(t);
         gm->diary.hide.push_back(r);
+        gm->diary.hideHitbox.push_back(h);
         for (size_t i = 0; i < vec.size(); i++) {
             createText(&text, &gm->diary.font, "./assets/fonts/arial.ttf",
                 vec[i], 80, sf::Vector2f(offset, 440), sf::Color::White);
@@ -30,6 +34,11 @@ int initDiary(game *gm)
                     rect = initRectangleShape(sf::Vector2f(offset, 440), sf::Color::Black, 2,
                         sf::Color::White, sf::Vector2f(text.getLocalBounds().width, 100));
                     gm->diary.hide[j].push_back(rect);
+                    hitbox.top = 440;
+                    hitbox.left = offset;
+                    hitbox.width = text.getLocalBounds().width;
+                    hitbox.height = 100;
+                    gm->diary.hideHitbox[j].push_back(hitbox);
                 }
             }
             gm->diary.text[j].push_back(text);
@@ -55,11 +64,11 @@ int main(void)
     string character;
     character = dialog(&gm);
 
+    initDiary(gm);
     setupDiaryButton(&gm);
     setupTreeButton(&gm);
     setupGoBackButton(&gm);
-
-    initDiary(gm);
+    setupSubmitButton(&gm);
 
     gm->dialogPannel = initRectangleShape((sf::Vector2f){4, 707},
         sf::Color(0, 0, 0, 0), 4, sf::Color::White, (sf::Vector2f){1910, 300});
