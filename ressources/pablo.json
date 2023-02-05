@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Hi I'm Pablo this is a test",
+            "text": "Je propose qu'on lève tous notre verre à James. Puisse-t-il être heureux dans l'autre monde.",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,31 @@
         },
         {
             "id": 2,
-            "text": "hey James",
+            "text": "Notre bon à rien de neuveu va nous mettre dans la merde carlos ! ",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 3,
+            "text": "Il a déduit que les derniers meutres étaient lier à la famille, il va nous trahir",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 4,
+            "text": "C'est toi qu'il va dénoncer en premier abruti ! Je te propose donc un marché",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 5,
+            "text": "Démerde toi pour tuer James, et je paye tes dettes",
             "dependsOn": [
                 
             ],

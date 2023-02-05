@@ -31,6 +31,62 @@
                 
             ],
             "clickable_words": ["Julia"]
+        },
+        {
+            "id": 5,
+            "text": "bon ca y est, il est mort , on va pas rester comme ca indéfiniement",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["mort"]
+        },
+        {
+            "id": 6,
+            "text": "Peut-être mais moi je ne tolère pas ta présence.",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Julia"]
+        },
+        {
+            "id": 7,
+            "text": "Bonsoir, qui êtes vous ?",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Julia"]
+        },
+        {
+            "id": 8,
+            "text": "Hm...expliquez vous",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Julia"]
+        },
+        {
+            "id": 9,
+            "text": "Ca expliquerai beaucoup de chose...",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Julia"]
+        },
+        {
+            "id": 10,
+            "text": "James...Je suis désolée mais je dois me débarasser de toi",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Julia"]
+        },
+        {
+            "id": 11,
+            "text": "Non, je veux ma vraie famille, je veux être heureuse",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["Julia"]
         }
     ]
 }

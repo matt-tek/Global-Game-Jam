@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Ouais, toujours dans les affaires , mais tu sais commment c'est, ca se sera jamais assez pour papa",
+            "text":  "Comment peux-tu être aussi insensible ??",
             "dependsOn": [
                 
             ],
@@ -10,6 +10,14 @@
         },
         {
             "id": 2,
+            "text": "Ouais, toujours dans les affaires , mais tu sais commment c'est, ca se sera jamais assez pour papa",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["affaires"]
+        },
+        {
+            "id": 3,
             "text": "Ouais mais va y, j'ai l'impression qu'il nous font pas confiance.",
             "dependsOn": [
                 
@@ -17,7 +25,7 @@
             "clickable_words": ["James"]
         },
         {
-            "id": 3,
+            "id": 4,
             "text": "T'as raison, allons voir des culs pour se changer les idées",
             "dependsOn": [
                 
