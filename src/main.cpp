@@ -11,7 +11,8 @@ screens currentScreen = screens::main_menu;
 vector<string> split(const string& str, const string& delimiters);
 void setupSubmitButton(game **gm);
 
-vector<vector<string>> str = {{"My name is James 4 years old", "James 4"},
+vector<vector<string>> str = {{"Je m'appelle James", "James"},
+    {"Elize ne s'entend pas avec Victor", "Elize Victor"},
     {"Je suis mort", "mort"}};
 
 int initDiary(game *gm)
