@@ -15,6 +15,14 @@
                 
             ],
             "clickable_words": ["James"]
+        },
+        {
+            "id": 3,
+            "text": "Elle sera impliqué dans tous les cas, tu dois pour dire la vérité ",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
         }
     ]
 }
