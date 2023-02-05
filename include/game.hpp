@@ -194,6 +194,7 @@ class game
     private:
         windowClass win;
     public:
+        int currentDiary = 0;
         diaryScreenClass diary;
         vector<string> collectedWords;
         static game *instance;

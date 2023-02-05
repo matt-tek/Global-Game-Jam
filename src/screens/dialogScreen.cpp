@@ -12,14 +12,10 @@ int diaryScreen(game *gm)
     sf::Vector2i mouse = sf::Mouse::getPosition((*gm->getWindow()->getWindow()));
 
     gm->goBackBut.drawButton(gm->getWindow()->getWindow());
-    for (size_t j = 0; j < gm->diary.text.size(); j++) {
-        for (size_t i = 0; i < gm->diary.text[j].size(); i++)
-            gm->getWindow()->getWindow()->draw(gm->diary.text[j][i]);
-    }
-    for (size_t j = 0; j < gm->diary.text.size(); j++) {
-        for (size_t i = 0; i < gm->diary.hide[j].size(); i++)
-            gm->getWindow()->getWindow()->draw(gm->diary.hide[j][i]);
-    }
+    for (size_t i = 0; i < gm->diary.text[gm->currentDiary].size(); i++)
+        gm->getWindow()->getWindow()->draw(gm->diary.text[gm->currentDiary][i]);
+    for (size_t i = 0; i < gm->diary.hide[gm->currentDiary].size(); i++)
+        gm->getWindow()->getWindow()->draw(gm->diary.hide[gm->currentDiary][i]);
     if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
         if (gm->goBackBut.isMouseOnButton((sf::Vector2f){(float)mouse.x, (float)mouse.y}) == 1) {
             gm->diaryBut.isMouseClicked = false;
