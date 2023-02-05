@@ -2,7 +2,7 @@
     "text": [
         {
             "id": 1,
-            "text": "Bien dormi les enfants ?",
+            "text": "Bien dormi les enfants ? ",
             "dependsOn": [
                 
             ],
@@ -10,7 +10,7 @@
         },
         {
             "id": 2,
-            "text": "...",
+            "text": "Est-ce une heure pour rentrer jeune fille ? ",
             "dependsOn": [
                 
             ],
@@ -18,7 +18,15 @@
         },
         {
             "id": 3,
-            "text": "Est-ce une heure pour rentrer jeune fille ?",
+            "text": "Pourquoi ? ",
+            "dependsOn": [
+                
+            ],
+            "clickable_words": ["James"]
+        },
+        {
+            "id": 4,
+            "text": "Pour commencer, pour toi c'est pas Victor mais papa et de deux il est en voyage d'affaire.",
             "dependsOn": [
                 
             ],

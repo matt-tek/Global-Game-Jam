@@ -3,7 +3,6 @@
 string dialogScreen(game *gm, string character, int *isPressed, bool *clicked);
 int diaryScreen(game *gm);
 int treeScreen(game *gm);
-screens currentScreen = dialog_screen;
 vector<string> split(const string& str, const string& delimiters);
 
 vector<vector<string>> str = {{"My name is James", "James"},
@@ -37,6 +36,7 @@ int initDiary(game *gm)
     }
     return 0;
 }
+screens currentScreen = screens::dialog_screen;
 
 int main(void)
 {
@@ -68,9 +68,9 @@ int main(void)
         }
         if (currentScreen == dialog_screen)
             character = dialogScreen(gm, character, &isPressed, &clicked);
-        else if (currentScreen == diary_screen)
+        else if (currentScreen == screens::diary_screen)
             diaryScreen(gm);
-        else if (currentScreen == tree_screen)
+        else if (currentScreen == screens::tree_screen)
             treeScreen(gm);
         gm->getWindow()->getWindow()->display();
     }

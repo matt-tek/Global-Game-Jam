@@ -1,0 +1,81 @@
+Dialogue :
+
+;; Intro:
+James - Catherine {
+    Catherine: "T'es rentré toi ? je pensais que t'allais dormir à la soirée vu l'heure qu'il est . "
+    James: "Non non, honnêtement je me sentais pas à l'aise là bas donc j'ai préféré partir. Toi par contre tu devrais être au lit."
+    Catherine: "C'est pas parce que t'as 4 ans de plus que moi que tu dois faire le malin, puis t'as qu'a le dire à ta soeur"
+    James: "Mais ... c'est ce que je fais là. Tu viens à peine d'être majeur joue pas la grande."
+    Catherine: "Bref, Agathe est dans sa chambre si tu veux la voir, elle est certainement en train de parler avec un nouveau gars."
+    James: "Je vais plutôt aller me coucher ça ira, je suis pas sur qu'elle veuille voir ma tête"
+    <James passe devant la chambre de Agathe et entends des bruits suspects>
+}
+
+
+
+;; Breakfast :
+
+Julia - Catherine - Agathe - James - Elize {
+    Ju : "Bien dormi les enfants ?". ~
+    Catherine : "au top" ~
+    James : "ça va" ~
+    Agathe : "pareil" ~
+    Catherine : "c'est vrai ça ?" ~
+    Agathe : "bah oui pourquoi ?" ~
+    Catherine : "j'entendais du bruit en direction de tes quartiers tard dans la nuit. Tu faisais quoi ?" ~
+    Agathe : "t'es sérieuse, tu devrais être aussi silencieuse que Elise si tu veux pas que je dévoile des choses." ~
+    Catherine : "Orhhh je plaisante juste." ~
+    Ju : "Est-ce une heure pour rentrer jeune fille ?"
+    ELize : "J'ai 20 ans Julia par pitié..."
+    Elize : "Où est Victor ?"
+    Julia : "Pourquoi ?"
+    Elize : "J'ai besoin d'argent."
+    Julia : "Pour commencer, pour toi c'est pas Victor mais papa et de deux il est en voyage d'affaire."
+    Elize : "Comme d'habitude j'ai envie de te dire..."
+    <La personne monte dans sa chambre>
+}
+
+Dîner de famille post mort de james: -> james est mort, zizanie entre les soeurs
+carlos et victor aussi
+petit dialogue entre carlos et elize pour initier leurs relations
+Carlos, signe 
+
+;; james et diego se voient :
+
+james - diego {
+    <James lis dans le journal que le gang de rojos manos, mode opératoire>
+    <James passe devant elize, conversation suspecte avec Carlos>
+    <Pablo apprend tous ce que james à dit à Diego>
+    James: "Comment ca va diego ? Toujours dans des affaires peu recommendables ?"
+    Diego: "Ouais, toujours dans les affaires, mais tu sais commment c'est, ca se sera jamais assez pour papa"
+    James: "Je sais, c'est pareil avec mon père, il est toujours en voyage d'affaire, il est jamais là pour nous."
+    Diego: "Ouais mais va y, j'ai l'impression qu'il nous font pas confiance."
+    James: "Je sais pas, n'y pensons pas écoute"
+    Diego: "T'as raison, allons voir des culs pour se changer les idées"
+    James: "Tu sais bien que c'est pas légal, allons plûtot boire un verre"
+    <James et Diego boivent un verre, James lui racontant les dingueries du journal ainsi que ses hypothèses sur Carlos>
+}
+
+;; Carlos et Sebastian se parlent pour tuer james
+Carlos, Sebastian {
+    Carlos: "On fait comment pour ce qu'on à dit ? "
+    Seb: "Je te l'ai dit, je veux me débarasser de Victor, sa femme n'assouvie guerre mes désirs de conquête."
+    Carlos: "Chaque chose en son temps par le tous puissant, suis mon dessin et tous se passera proprement"
+    Seb: "D'accord, mais on ne touche pas à un cheveux de ma fille"
+    <Carlos et seb se serrent la mains et repartent chacun de leurs cotés>
+}
+
+;; Carlos emmène Elize et julia dans l'un des bar de sebastien
+;; OU ALORS 
+;; Juste Julia et Eliza -> Sebastian arrive et prend Eliza à part
+Elize, Carlos, Julia {
+    <Didascalie qui suggèrent que 
+    <Elize et Sebastien discutent, Seb lui dit toute la vérité>
+
+}
+
+
+A faire - code {
+    arbre
+    journal -> commencé par lenny
+}
