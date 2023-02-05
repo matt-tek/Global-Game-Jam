@@ -52,6 +52,12 @@
             "text": "Orhhh je plaisante juste.",
             "dependsOn": [],
             "clickable_words": ["James"]
+        },
+        {
+            "id": 8,
+            "text": "Ho calme toi grande soeur, on parle de notre grand frère quand même.",
+            "dependsOn": [],
+            "clickable_words": ["James"]
         }
     ]
 }
